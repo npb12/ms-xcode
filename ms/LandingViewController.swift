@@ -61,25 +61,19 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
                         println(httpResponse.statusCode)
                         
                         // here we capture what the server sends back, which should be the three items: userID, username, api_key
-                        println("about to json")
                         var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
-                        println("and we jsoned")
+                        
                         
                         if let json = jsonResult[0] as? Dictionary<String, AnyObject> {
-                            println(json)
-                            println("you are here")
                             if let un: AnyObject = json["username"] {
                                 if let uID: AnyObject = json["userID"] {
                                     if let api: AnyObject = json["api_key"] {
                                         let username: String = un as String
-                                        println(username)
+                                        self.storeUserName(username)
                                         let userID: String = uID as String
-                                        println(userID)
+                                        self.storeUserID(userID)
                                         let api_key: String = api as String
-                                        println(api_key)
-                                        //
-                                        // Now you have three variables from the server
-                                        // and you can add them to user defaults
+                                        self.storeApiKey(api_key)                                        
                                     }
                                     
                                 }
@@ -117,6 +111,27 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func storeUserName(username: String)
+    {
+      let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(username, forKey: "userName")
+        defaults.synchronize()
+    }
+    
+    func storeUserID(userid: String)
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(userid, forKey: "userID")
+        defaults.synchronize()
+    }
+    
+    func storeApiKey(apikey: String)
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(apikey, forKey: "api_key")
+        defaults.synchronize()
     }
   
     func updateUserLoggedInFlag() {
