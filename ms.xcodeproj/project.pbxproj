@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A2B92591B10125200583088 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B92581B10125200583088 /* User.swift */; };
+		4A2E46301B1D7F8E007C02E4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4A2E462F1B1D7F8E007C02E4 /* images */; };
 		4ABB9EED1AA2F05B00A72F08 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */; };
 		4ABB9EEF1AA2F05B00A72F08 /* MissedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EEA1AA2F05B00A72F08 /* MissedViewController.swift */; };
 		4ABB9EF01AA2F05B00A72F08 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EEB1AA2F05B00A72F08 /* SocialViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		4A2B92581B10125200583088 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4A2E462F1B1D7F8E007C02E4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
 		4ABB9EEA1AA2F05B00A72F08 /* MissedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedViewController.swift; sourceTree = "<group>"; };
 		4ABB9EEB1AA2F05B00A72F08 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				CFE490851A545A0800D66D5A /* LaunchScreen.xib */,
 				CFE4907B1A545A0800D66D5A /* ms.xcdatamodeld */,
 				4AC7CFED1B0B20EA001D48B4 /* Images.xcassets */,
+				4A2E462F1B1D7F8E007C02E4 /* images */,
 				CFE490771A545A0800D66D5A /* Supporting Files */,
 			);
 			path = ms;
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2E46301B1D7F8E007C02E4 /* images in Resources */,
 				4AC7CFFB1B0EADE0001D48B4 /* Main.storyboard in Resources */,
 				4AC7CFFE1B0EB055001D48B4 /* Storyboard.storyboard in Resources */,
 				4AC7CFEE1B0B20EA001D48B4 /* Images.xcassets in Resources */,
