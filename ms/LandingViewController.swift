@@ -26,7 +26,7 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
         //serverManagement.serverGet()
         
         self.fbLoginView.delegate = self
-        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
         
     }
     
@@ -61,21 +61,22 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
                         println(httpResponse.statusCode)
                         
                         // here we capture what the server sends back, which should be the three items: userID, username, api_key
-                        var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSArray
+                        var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSArray
                         
                         
                         if let json = jsonResult[0] as? Dictionary<String, AnyObject> {
                             if let un: AnyObject = json["username"] {
                                 if let uID: AnyObject = json["userID"] {
                                     if let api: AnyObject = json["api_key"] {
-                                        let username: String = un as String
-                                        self.storeUserName(username)
-                                        let userID: String = uID as String
-                                        self.storeUserID(userID)
-                                        let api_key: String = api as String
-                                        self.storeApiKey(api_key)                                        
-                                    }
                                     
+                                        let username: String = un as! String
+                                        self.storeUserName(username)
+                                        let userID: String = uID as! String
+                                        self.storeUserID(userID)
+                                        let api_key: String = api as! String
+                                        self.storeApiKey(api_key)
+                                    
+                                    }
                                 }
                             }
                         }
@@ -93,8 +94,16 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
     
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
-        println("User Name: \(user.name)")
+        println("\(user.name) logged in")
+        self.storeName(user.name)
         
+    }
+    
+    func storeName(name: String)
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(name, forKey: "name")
+        defaults.synchronize()
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {

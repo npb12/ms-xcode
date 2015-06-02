@@ -20,6 +20,8 @@ class HomeViewController: UITabBarController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        
+
 /*
         let defaults = NSUserDefaults.standardUserDefaults()
         

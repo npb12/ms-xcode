@@ -32,14 +32,14 @@ class ServerManagement
                 if httpResponse.statusCode == 200 {
                     var err: NSError?
                     println(httpResponse.statusCode)
-                    var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+                    var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
                     if let json = jsonResult as? Dictionary<String, AnyObject> {
                         let numSystems = json["objects"]!.count - 1
                         for index in 0...numSystems {
                             if let username: AnyObject = json["objects"]![index]["fName"]! {
  //                               if let last: AnyObject = json["objects"]![index]["lastName"]! {
  //                                   if let id: AnyObject = json["objects"]![index]["resource_uri"]! {
-                                        let userName: String = username as String
+                                        let userName: String = username as! String
                                         println(userName)
 //                                        let lName: String = last as String
  //                                       let ownerID: String = id as String

@@ -25,7 +25,7 @@ class CoreDataManagement {
     
 
         let appDelegate =
-        UIApplication.sharedApplication().delegate as AppDelegate
+        UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
         
@@ -62,7 +62,7 @@ class CoreDataManagement {
         
         //declare AppDelegate object
         let appDelegate =
-        UIApplication.sharedApplication().delegate as AppDelegate
+        UIApplication.sharedApplication().delegate as! AppDelegate
         
         //declare fetch request of entitiy Location
         let fetchRequest = NSFetchRequest(entityName: "Location")
@@ -72,7 +72,7 @@ class CoreDataManagement {
         var fetchResults = appDelegate.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil)
        
         //return array of Location objects
-        return fetchResults! as Array<NSManagedObject>
+        return fetchResults! as! Array<NSManagedObject>
     }
     
     
@@ -81,9 +81,9 @@ class CoreDataManagement {
         var coreDataToServer = CoreDataToServer()
 
         //get values from NSManagedObject (objects)
-        var latitude = objects.valueForKey("latitude") as String?
-        var longitude = objects.valueForKey("longitude") as String?
-        var timestamp = objects.valueForKey("timestamp") as String?
+        var latitude = objects.valueForKey("latitude") as! String?
+        var longitude = objects.valueForKey("longitude") as! String?
+        var timestamp = objects.valueForKey("timestamp") as! String?
         
 //        println(latitude!)
 //        println(longitude!)
@@ -102,7 +102,7 @@ class CoreDataManagement {
         var cleanNum = 0
         //declare AppDelegate object
         let appDelegate =
-        UIApplication.sharedApplication().delegate as AppDelegate
+        UIApplication.sharedApplication().delegate as! AppDelegate
         
         let context = appDelegate.managedObjectContext!
         
@@ -113,7 +113,7 @@ class CoreDataManagement {
         var result = appDelegate.backgroundContext!.executeFetchRequest(fetchReq, error:&error)
         //delete these objects
         for resultItem in result! {
-            var locationItem = resultItem as Location
+            var locationItem = resultItem as! Location
             appDelegate.backgroundContext!.deleteObject(locationItem)
 //            println("Delete: \(cleanNum++)")
         }

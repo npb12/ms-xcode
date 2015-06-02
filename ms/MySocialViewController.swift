@@ -11,16 +11,45 @@ import UIKit
 
 
 
-class MySocialViewController: UIViewController {
+
+
+class MySocialViewController: UIViewController, UITextFieldDelegate{
     
-    let serverManagement = ServerManagement()
+    var user = User()
     
     
+    @IBOutlet weak var FBtextview: UITextView!
+    @IBOutlet weak var Instagramtextfield: UITextField!
+    @IBOutlet weak var Linkedintextfield: UITextField!
+    @IBOutlet weak var Snapchattextfield: UITextField!
+    
+
+
+    var picture0 = UIButton()
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+          FBtextview.text = String(self.user.getName())
+        
+        
+        self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        Instagramtextfield.delegate = self
+        Linkedintextfield.delegate = self
+        Snapchattextfield.delegate = self
+        
+
+    }
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        println("this is MySocial VIEW")
+
+      
+
         
     }
     
@@ -30,4 +59,22 @@ class MySocialViewController: UIViewController {
     }
     
     
-}
+
+
+    
+    func picture0Tapped(sender: UIButton!) {
+        println("button tapped!")
+    }
+    
+
+    
+    
+
+    
+        
+        
+        
+        
+    }
+    
+    

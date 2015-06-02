@@ -24,6 +24,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.AppDelegate.window.getter : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
                   timestampString = "443600999.507139"
                   startingColumnNumber = "9223372036854775807"
@@ -38,6 +39,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.AppDelegate.window.setter : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
                   timestampString = "443600999.510235"
                   startingColumnNumber = "9223372036854775807"
@@ -52,6 +54,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.AppDelegate.window.materializeForSet : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
                   timestampString = "443600999.510527"
                   startingColumnNumber = "9223372036854775807"
@@ -66,6 +69,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.AppDelegate.init (ms.AppDelegate.Type)() -&gt; ms.AppDelegate"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
                   timestampString = "443600999.510782"
                   startingColumnNumber = "9223372036854775807"
@@ -114,6 +118,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.ServerManagement.__deallocating_deinit"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/ServerManagement.swift"
                   timestampString = "444058294.792984"
                   startingColumnNumber = "9223372036854775807"
@@ -128,6 +133,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.ServerManagement.init (ms.ServerManagement.Type)() -&gt; ms.ServerManagement"
                   moduleName = "ms"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms/ms/ServerManagement.swift"
                   timestampString = "444058294.793258"
                   startingColumnNumber = "9223372036854775807"
@@ -162,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/AppDelegate.swift"
-            timestampString = "446527123.085696"
+            timestampString = "453955347.037374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -192,27 +198,29 @@
                   continueAfterRunningActions = "No"
                   symbolName = "ms.AppDelegate.__deallocating_deinit"
                   moduleName = "ms"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "446169971.315372"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "454811652.632757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "top_level_code"
+                  symbolName = "main"
                   moduleName = "ms"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "446169971.31615"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "454811652.633102"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "4">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -230,6 +238,166 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "serverGet()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/AppDelegate.swift"
+            timestampString = "453952360.150978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/MySocialViewController.swift"
+            timestampString = "454912931.399111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "MySocialViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/FBphotohelper.swift"
+            timestampString = "454362397.512193"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "FBHelper"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/UserPhotos.swift"
+            timestampString = "454198792.753145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "User_Photos"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/UserPhotos.swift"
+            timestampString = "454198792.753145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "User_Photos"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/UserPhotos.swift"
+            timestampString = "454198792.753145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "User_Photos"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/AlbumViewController.swift"
+            timestampString = "454521112.631673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "AlbumViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/AlbumsViewController.swift"
+            timestampString = "454405327.591718"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/AlbumsViewController.swift"
+            timestampString = "454405327.591718"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ms/SinglePhotoViewController.swift"
+            timestampString = "454518687.432592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
