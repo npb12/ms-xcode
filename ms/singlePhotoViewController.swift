@@ -22,7 +22,7 @@ import UIKit
 
 class SinglePhotoViewController: UIViewController {
     
-     var photo:UIImage! = nil
+     var photo:UIImage!
     
    
     @IBOutlet weak var photoLarge: UIImageView!
@@ -34,9 +34,8 @@ class SinglePhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         
-            photoLarge!.image = photo!
+        photoLarge.image = photo
 
-     //   println(self.photo!)
         super.viewDidLoad()
     }
     
@@ -44,6 +43,9 @@ class SinglePhotoViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    user.setImage(photo, frame)
+
     
     
 }

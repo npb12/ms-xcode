@@ -32,7 +32,7 @@
             </objects>
             <point key="canvasLocation" x="1053" y="-291.75"/>
         </scene>
-        <!--my.social-->
+        <!--My Social View Controller-->
         <scene sceneID="yvg-a3-t8M">
             <objects>
                 <viewController storyboardIdentifier="MySocialViewController" id="OXu-M8-kCf" customClass="MySocialViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
@@ -638,18 +638,15 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24A-rB-K8h" userLabel="picture0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24A-rB-K8h" userLabel="picture0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="picture0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="CMr-QA-XD8"/>
                                     <constraint firstAttribute="height" constant="110" id="fuF-88-qJg"/>
                                 </constraints>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="CMr-QA-XD8"/>
@@ -662,15 +659,19 @@
                                         <include reference="fuF-88-qJg"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Yo0-7F-VeG" kind="presentation" id="RSJ-NL-84j"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3d-o6-8Yt" userLabel="Button1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3d-o6-8Yt" userLabel="picture1">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="picture1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="FS5-8w-7RK"/>
                                     <constraint firstAttribute="height" constant="75" id="FjR-Z4-9tW"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -686,15 +687,19 @@
                                         <include reference="FjR-Z4-9tW"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Yo0-7F-VeG" kind="presentation" id="Xl0-O3-dza"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stO-W8-yuW" userLabel="Button2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stO-W8-yuW" userLabel="picture2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="picture2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="9Qk-QY-Oej"/>
                                     <constraint firstAttribute="height" constant="75" id="LPR-0b-Q67"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -710,15 +715,19 @@
                                         <include reference="LPR-0b-Q67"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Yo0-7F-VeG" kind="presentation" id="6cf-Yj-gF3"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-DH-s3r" userLabel="Button3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-DH-s3r" userLabel="picture3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="picture3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="VtA-qn-KR1"/>
                                     <constraint firstAttribute="width" constant="75" id="mXu-JE-Ag0"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -734,15 +743,19 @@
                                         <include reference="mXu-JE-Ag0"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Yo0-7F-VeG" kind="presentation" id="lLs-Pt-UX6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Fb-twj" userLabel="Button4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Fb-twj" userLabel="picture4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="picture4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="eNE-c1-xRy"/>
                                     <constraint firstAttribute="width" constant="75" id="hRD-eb-QRU"/>
                                 </constraints>
-                                <state key="normal" title="+">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -758,6 +771,9 @@
                                         <include reference="hRD-eb-QRU"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Yo0-7F-VeG" kind="presentation" id="ctv-Qd-oCF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -834,18 +850,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="my.social" id="q24-DJ-XxC"/>
+                    <navigationItem key="navigationItem" id="JhD-Qs-kgM"/>
                     <connections>
                         <outlet property="FBtextview" destination="yOd-tq-6Ow" id="s3w-3K-0qj"/>
                         <outlet property="Instagramtextfield" destination="OCz-2L-WbC" id="zqK-vl-oLm"/>
                         <outlet property="Linkedintextfield" destination="gPs-F2-TbV" id="GNn-mT-kEf"/>
                         <outlet property="Snapchattextfield" destination="bSD-jO-rn1" id="KiA-Ux-gcQ"/>
-                        <segue destination="Yo0-7F-VeG" kind="presentation" id="Vck-9W-F84"/>
+                        <outlet property="picture0" destination="24A-rB-K8h" id="kCz-wK-IXQ"/>
+                        <outlet property="picture1" destination="j3d-o6-8Yt" id="Cof-Th-HvH"/>
+                        <outlet property="picture2" destination="stO-W8-yuW" id="GaG-Z6-s0E"/>
+                        <outlet property="picture3" destination="PnW-DH-s3r" id="njX-Zx-lOw"/>
+                        <outlet property="picture4" destination="Tuk-Fb-twj" id="UFS-PT-0K0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rw6-tc-fEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1419" y="3316.5"/>
+            <point key="canvasLocation" x="2337" y="3316.5"/>
         </scene>
         <!--Albums View Controller-->
         <scene sceneID="3k2-ZM-96U">
@@ -867,7 +887,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJn-Le-HZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="3316.5"/>
+            <point key="canvasLocation" x="2985" y="3316.5"/>
         </scene>
         <!--AlbumViewController-->
         <scene sceneID="CUV-ZI-2v5">
@@ -896,7 +916,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75T-XR-boT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740.5" y="3316.5"/>
+            <point key="canvasLocation" x="3658.5" y="3316.5"/>
         </scene>
         <!--Single Photo View Controller-->
         <scene sceneID="eeK-pw-Rwi">
@@ -952,7 +972,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQM-zh-km7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3516" y="3316.5"/>
+            <point key="canvasLocation" x="4434" y="3316.5"/>
         </scene>
         <!--Social-->
         <scene sceneID="0rf-ZW-z8Q">
@@ -986,32 +1006,12 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OXu-M8-kCf" kind="relationship" relationship="viewControllers" id="5nd-SQ-tqy"/>
+                        <segue destination="EjJ-g3-wgJ" kind="relationship" relationship="viewControllers" id="5nd-SQ-tqy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOX-e9-fjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069" y="430.99999999999989"/>
-        </scene>
-        <!--Missed-->
-        <scene sceneID="gRc-Tg-TKS">
-            <objects>
-                <viewController storyboardIdentifier="EncounterViewController" title="Missed" id="s3W-pY-AYN" customClass="EncounterViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8B8-VO-6Jt"/>
-                        <viewControllerLayoutGuide type="bottom" id="67S-0x-vyK"/>
-                    </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="M1W-8x-rQW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Missed" image="Image-1" selectedImage="Image-1" id="gfz-HM-2s8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq7-Dn-w6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2003" y="1381.9999999999998"/>
         </scene>
         <!--settings-->
         <scene sceneID="LUl-0l-q2M">
@@ -1040,6 +1040,42 @@
             </objects>
             <point key="canvasLocation" x="2891" y="1146.9999999999995"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hAd-iT-a3s">
+            <objects>
+                <viewController id="RgB-70-ZNT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jjy-vh-IvH"/>
+                        <viewControllerLayoutGuide type="bottom" id="j8a-MU-SKp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QqU-Mp-btB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-A6-vDU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-136" width="400" height="936"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nhe-A6-vDU"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nhe-A6-vDU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Of-E8-tbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2274" y="1905.75"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="c8L-hV-CaH">
             <objects>
@@ -1058,6 +1094,25 @@
             </objects>
             <point key="canvasLocation" x="229" y="438.99999999999989"/>
         </scene>
+        <!--my.social-->
+        <scene sceneID="chS-FK-mfN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EjJ-g3-wgJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="my.social" id="q24-DJ-XxC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k1c-iZ-J4C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OXu-M8-kCf" kind="relationship" relationship="rootViewController" id="wSw-zt-M67"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADK-by-Ihk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1419" y="3316.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Facebook-icon" width="512" height="512"/>
@@ -1068,6 +1123,7 @@
         <image name="checkbox" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lLs-Pt-UX6"/>
         <segue reference="N6z-AQ-e3X"/>
     </inferredMetricsTieBreakers>
 </document>

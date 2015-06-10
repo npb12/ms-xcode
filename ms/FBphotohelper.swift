@@ -73,7 +73,7 @@ class FBHelper{
             let graphData = result.valueForKey("data") as! Array<FBGraphObject>
             var albums = [AlbumModel] ()
             for obj:FBGraphObject in graphData{
-                println(obj.description)
+             //   println(obj.description)
                 let pictureURL = obj.valueForKey("picture") as! String
                 let url = NSURL(string: pictureURL)
                 let picData = NSData(contentsOfURL: url!)
@@ -111,8 +111,7 @@ class FBHelper{
     }
     
     func fbRequestCompletionHandler(connection:FBRequestConnection!, result:AnyObject!, error:NSError!){
-        println("init")
-
+        
         if let gotError = error{
             //got error
         }
@@ -127,7 +126,7 @@ class FBHelper{
             
             let image = UIImage(data: imageData!)
             
-            println("userFBID: \(self.user.user_id)  image: \(image)")
+        //    println("userFBID: \(self.user.user_id)  image: \(image)")
             
             var userModel = User_Photos(image: image!)
             

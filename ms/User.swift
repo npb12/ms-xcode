@@ -93,20 +93,61 @@ class User{
         
         
     }
+  
+    func setImage(image: UIImage){
+        
+        
+   
+        let imageData = UIImagePNGRepresentation(image)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let imagePath = paths.stringByAppendingPathComponent("cached.png")
+        
+        if !imageData.writeToFile(imagePath, atomically: false)
+        {
+            println("not saved")
+        } else {
+            println("saved")
+            NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
+        }
+        
+    }
     
     
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+    func getImage()->UIImage
+    {
+        
+        let default_image = UIImage(named: "default_image") as UIImage?
+        
+        println("ehllo")
+
+        
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        {
+            if paths.count > 0
+            {
+                if let dirPath = paths[0] as? String
+                {
+                    if let readPath = dirPath.stringByAppendingPathComponent("cached.png") as String?{
+                        if let image = UIImage(contentsOfFile: readPath){
+                            println("helllo")
+                            return image
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return default_image!
+
+        
+    }
     
     
 }

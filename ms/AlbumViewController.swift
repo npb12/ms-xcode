@@ -17,8 +17,11 @@ class AlbumViewController:UITableViewController{
     var fbHelper:FBHelper?
     var sources = [UIImage]();
     var photo:UIImage?
+    var frame: Int!
     
-    var singlePhotoViewController:SinglePhotoViewController?;
+    var user = User()
+    
+    var singlePhotoViewController:SinglePhotoViewController?
 
     func photoExecuted(notification:NSNotification){
         let photos:[UIImage]? = notification.userInfo?["photos"] as? [UIImage]
@@ -28,7 +31,7 @@ class AlbumViewController:UITableViewController{
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let img = self.sources[indexPath.row]
-        println(img.size.height)
+       // println(img.size.height)
         return img.size.height
     }
     
@@ -40,7 +43,7 @@ class AlbumViewController:UITableViewController{
   //        imageView.image = self.sources[indexPath.row];
     //      cell.contentView.addSubview(imageView);
             cell.imageView!.image = self.sources[indexPath.row];
-            println(self.sources[indexPath.row])
+   //         println(self.sources[indexPath.row])
         return cell;
         
     
@@ -51,10 +54,15 @@ class AlbumViewController:UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("ShowEachSegue", sender: self)
-        self.photo = self.sources[indexPath.row] as UIImage
-        self.singlePhotoViewController?.photo = photo
+        
+       
+        let photo = self.sources[indexPath.row] as UIImage
+        user.setImage(photo)
         println(photo)
+        singlePhotoViewController?.photo = photo
+        //println(singlePhotoViewController?.photo)
+      //  performSegueWithIdentifier("ShowEachSegue", sender: self)
+        
     }
     
     
@@ -89,7 +97,6 @@ class AlbumViewController:UITableViewController{
         if(segue.identifier == "ShowEachSegue"){
             self.singlePhotoViewController = segue.destinationViewController as? SinglePhotoViewController
             
-        
     }
   
 }
