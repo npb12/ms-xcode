@@ -2,32 +2,60 @@
 //  SocialViewController.swift
 //  ms
 //
-//  Created by Neil Ballard on 3/1/15.
+//  Created by Neil Ballard on 6/18/15.
 //  Copyright (c) 2015 Missed Social. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-
-
-class SocialViewController: UIViewController {
+class SocialViewController: UIViewController, UITableViewDataSource {
     
-    let serverManagement = ServerManagement()
+    var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
     
     
-    
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        println("this is Social VIEW")
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /*
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+    
+    }
+    
+    func selectRowAtIndexPath(indexPath: NSIndexPath!, animated: Bool, scrollPosition: UITableViewScrollPosition){
+    println("selectrowatindexpath")
+    
+    }
     
     
+    */
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.results.count ?? 0
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        var cell = tableView.dequeueReusableCellWithIdentifier("socialCell") as! SocialTableViewCell
+        cell.socialImageView.image = self.results[indexPath.row]
+        return cell
+    }
+    
+    /*
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+    }
+    */
+
+
 }

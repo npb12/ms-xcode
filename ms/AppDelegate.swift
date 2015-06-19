@@ -43,7 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Each user should receive their own 'api_key', and this is done server side (not on the apps) but
         // the apps will need to receive that key initially and store it. You'll have to then use that api_key for every
         // call to Zeus
-        let urlPath = "http://23.239.3.97:8000/user/api/v1/location/?username=garfonzo&api_key=774ae5de0f08b8be5e02a37c2598b49337720e73&format=json"
+        let urlPath = "http://99.999.999.97:8000/user/api/v1/location/?username=garfonzo&api_key=774ae5de0f08b8be5e02a37c2598b49337720e73&format=json"
+        //let urlPath = "http://23.239.3.97:8000/user/api/v1/location/?username=garfonzo&api_key=774ae5de0f08b8be5e02a37c2598b49337720e73&format=json"
         let url = NSURL(string: urlPath)
         // The request needs to be 'Mutable' because we'll be attaching parameters to the POST request
         let request = NSMutableURLRequest(URL: url!)

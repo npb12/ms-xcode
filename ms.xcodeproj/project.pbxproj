@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2886351B2F8A0900919FB7 /* MissedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2886341B2F8A0900919FB7 /* MissedTableViewCell.swift */; };
+		4A2886371B2FC9CE00919FB7 /* GetMissed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2886361B2FC9CE00919FB7 /* GetMissed.swift */; };
 		4A2B92591B10125200583088 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B92581B10125200583088 /* User.swift */; };
 		4A2E46301B1D7F8E007C02E4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4A2E462F1B1D7F8E007C02E4 /* images */; };
 		4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E46341B257148007C02E4 /* MissedViewController.swift */; };
+		4A817CF11B328209007C8AA4 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF01B328209007C8AA4 /* SocialViewController.swift */; };
+		4A817CF31B32824B007C8AA4 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */; };
+		4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */; };
+		4A817CF81B33A5B8007C8AA4 /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */; };
 		4ABB9EED1AA2F05B00A72F08 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */; };
-		4ABB9EF01AA2F05B00A72F08 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EEB1AA2F05B00A72F08 /* SocialViewController.swift */; };
 		4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */; };
 		4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC267E41A6E3CDB00AA6478 /* Location.m */; };
 		4AC597A11A85D7E600A60F2A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */; };
@@ -50,11 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A2886341B2F8A0900919FB7 /* MissedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedTableViewCell.swift; sourceTree = "<group>"; };
+		4A2886361B2FC9CE00919FB7 /* GetMissed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMissed.swift; sourceTree = "<group>"; };
 		4A2B92581B10125200583088 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A2E462F1B1D7F8E007C02E4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		4A2E46341B257148007C02E4 /* MissedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedViewController.swift; sourceTree = "<group>"; };
+		4A817CF01B328209007C8AA4 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
+		4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
-		4ABB9EEB1AA2F05B00A72F08 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocialViewController.swift; sourceTree = "<group>"; };
 		4AC267D71A6E1F5C00AA6478 /* ms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ms-Bridging-Header.h"; sourceTree = "<group>"; };
 		4AC267E41A6E3CDB00AA6478 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = SOURCE_ROOT; };
@@ -111,8 +121,28 @@
 			isa = PBXGroup;
 			children = (
 				4A2E46341B257148007C02E4 /* MissedViewController.swift */,
+				4A2886341B2F8A0900919FB7 /* MissedTableViewCell.swift */,
+				4A2886361B2FC9CE00919FB7 /* GetMissed.swift */,
 			);
 			name = Missed;
+			sourceTree = "<group>";
+		};
+		4A817CEF1B328030007C8AA4 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				4A817CF01B328209007C8AA4 /* SocialViewController.swift */,
+				4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */,
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		4A817CF41B33A3F1007C8AA4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */,
+				4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		4AC5979F1A85D7B200A60F2A /* Frameworks */ = {
@@ -164,6 +194,8 @@
 		CFE490761A545A0800D66D5A /* ms */ = {
 			isa = PBXGroup;
 			children = (
+				4A817CF41B33A3F1007C8AA4 /* Profile */,
+				4A817CEF1B328030007C8AA4 /* Social */,
 				4A2E46311B256FE6007C02E4 /* Missed */,
 				4AC7CFF21B0DC0E6001D48B4 /* MySocial */,
 				4AC267D71A6E1F5C00AA6478 /* ms-Bridging-Header.h */,
@@ -173,7 +205,6 @@
 				4ACA934C1A95A46600808F3F /* LandingViewController.swift */,
 				4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */,
 				4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */,
-				4ABB9EEB1AA2F05B00A72F08 /* SocialViewController.swift */,
 				4ACC0DCA1A760B8900CF74C4 /* ServerManagement.swift */,
 				4ACC0DC61A70CA8D00CF74C4 /* CoreDataManagement.swift */,
 				4ACC0DC81A744A6200CF74C4 /* CoreDataToServer.swift */,
@@ -324,15 +355,20 @@
 				CFE4907A1A545A0800D66D5A /* AppDelegate.swift in Sources */,
 				4AC7CFF41B0E92B2001D48B4 /* InstagramBox.swift in Sources */,
 				4AC7CFF81B0E932A001D48B4 /* LinkedinBox.swift in Sources */,
-				4ABB9EF01AA2F05B00A72F08 /* SocialViewController.swift in Sources */,
+				4A817CF81B33A5B8007C8AA4 /* UserProfileTableViewCell.swift in Sources */,
 				4AC597A31A8B4CCF00A60F2A /* HomeViewController.swift in Sources */,
 				4AC7CFF01B0DBE53001D48B4 /* FacebookBox.swift in Sources */,
+				4A817CF31B32824B007C8AA4 /* SocialTableViewCell.swift in Sources */,
 				4A2B92591B10125200583088 /* User.swift in Sources */,
 				4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */,
 				4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */,
 				4AEFB2BD1B119348008FC58A /* AlbumModel.swift in Sources */,
 				4AEFB2C51B11CA4E008FC58A /* AlbumViewController.swift in Sources */,
+				4A2886351B2F8A0900919FB7 /* MissedTableViewCell.swift in Sources */,
 				4AEFB2BB1B1192BA008FC58A /* UserPhotos.swift in Sources */,
+				4A2886371B2FC9CE00919FB7 /* GetMissed.swift in Sources */,
+				4A817CF11B328209007C8AA4 /* SocialViewController.swift in Sources */,
+				4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */,
 				4AEFB2C91B159E5F008FC58A /* SinglePhotoViewController.swift in Sources */,
 				4AEFB2BF1B11945B008FC58A /* FBphotohelper.swift in Sources */,
 				4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */,

@@ -8,8 +8,12 @@
 
 import UIKit
 
-class MissedViewController: UIViewController {
+class MissedViewController: UIViewController, UITableViewDataSource{
+    
 
+    var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +24,29 @@ class MissedViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+/*
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+
+    }
     
+    func selectRowAtIndexPath(indexPath: NSIndexPath!, animated: Bool, scrollPosition: UITableViewScrollPosition){
+        println("selectrowatindexpath")
+        
+    }
+    
+
+*/
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.results.count ?? 0
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        var cell = tableView.dequeueReusableCellWithIdentifier("missedCell") as! MissedTableViewCell
+        cell.missedImageView.image = self.results[indexPath.row]
+        return cell
+    }
 
     /*
     // MARK: - Navigation
