@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ysT-1o-S3b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OXu-M8-kCf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -1569,7 +1569,9 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ysT-1o-S3b" kind="presentation" id="AVg-3L-ZSZ"/>
+                        <segue destination="EjJ-g3-wgJ" kind="relationship" relationship="viewControllers" id="q8c-Sb-jBJ"/>
+                        <segue destination="RgB-70-ZNT" kind="relationship" relationship="viewControllers" id="mo1-Yt-cwr"/>
+                        <segue destination="d1V-iD-s6G" kind="relationship" relationship="viewControllers" id="KXo-x8-4M9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOX-e9-fjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1586,10 +1588,10 @@
             </objects>
             <point key="canvasLocation" x="2891" y="1146.9999999999995"/>
         </scene>
-        <!--Missed View Controller-->
+        <!--MissedViewController-->
         <scene sceneID="hAd-iT-a3s">
             <objects>
-                <viewController id="RgB-70-ZNT" customClass="MissedViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RgB-70-ZNT" userLabel="MissedViewController" customClass="MissedViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jjy-vh-IvH"/>
                         <viewControllerLayoutGuide type="bottom" id="j8a-MU-SKp"/>
@@ -1795,6 +1797,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Edo-I0-k9I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Of-E8-tbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
