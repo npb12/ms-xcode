@@ -1390,6 +1390,7 @@
                                         </variation>
                                         <connections>
                                             <outlet property="dataSource" destination="ysT-1o-S3b" id="P3F-B3-jRQ"/>
+                                            <outlet property="delegate" destination="ysT-1o-S3b" id="eyO-8k-3r8"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -1487,16 +1488,17 @@
                     <connections>
                         <outlet property="PhotoView" destination="Fkk-37-TmL" id="HjL-kZ-PIZ"/>
                         <outlet property="tableView" destination="m5q-i6-MeO" id="muf-z4-yTm"/>
+                        <segue destination="33g-xr-x75" kind="show" identifier="WebSegue" id="chW-zy-fwR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRa-ng-fFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4332" y="1677.75"/>
+            <point key="canvasLocation" x="4366.5" y="1673.25"/>
         </scene>
-        <!--View Controller-->
+        <!--SocialWebViewController-->
         <scene sceneID="5zr-lj-yVz">
             <objects>
-                <viewController id="33g-xr-x75" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SocialWebViewController" id="33g-xr-x75" userLabel="SocialWebViewController" customClass="SocialWebViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xKZ-ss-5bW"/>
                         <viewControllerLayoutGuide type="bottom" id="GXF-xR-Uxd"/>
@@ -1504,90 +1506,55 @@
                     <view key="view" contentMode="scaleToFill" id="Grx-Yh-X5s">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-zj-w54">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcq-JR-dMW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="0Mq-bz-vCd"/>
-                                    <constraint firstAttribute="height" constant="275" id="J4d-2D-C0V"/>
+                                    <constraint firstAttribute="height" constant="800" id="Ccd-4a-Pr2"/>
+                                    <constraint firstAttribute="width" constant="400" id="IWm-Sb-s0N"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="usersocialCell" id="JZ9-ad-QYv" customClass="UserProfileTableViewCell" customModule="ms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JZ9-ad-QYv" id="jvY-24-J28">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0no-CR-ITs" userLabel="socialImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="20" y="5" width="35" height="30"/>
-                                                    </variation>
-                                                </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq2-Mf-E9g" userLabel="socialTextView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="72" y="0.0" width="246" height="40"/>
-                                                    </variation>
-                                                </textView>
-                                            </subviews>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="0no-CR-ITs"/>
-                                                    <exclude reference="bq2-Mf-E9g"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="0no-CR-ITs"/>
-                                                    <include reference="bq2-Mf-E9g"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="socialImageView" destination="0no-CR-ITs" id="Nec-7s-2km"/>
-                                            <outlet property="socialTextView" destination="bq2-Mf-E9g" id="T34-g5-0e2"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="0Mq-bz-vCd"/>
-                                        <exclude reference="J4d-2D-C0V"/>
+                                        <exclude reference="Ccd-4a-Pr2"/>
+                                        <exclude reference="IWm-Sb-s0N"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="39" width="400" height="275"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="0Mq-bz-vCd"/>
-                                        <include reference="J4d-2D-C0V"/>
+                                        <include reference="Ccd-4a-Pr2"/>
+                                        <include reference="IWm-Sb-s0N"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="ysT-1o-S3b" id="DzQ-iz-7QV"/>
-                                </connections>
-                            </tableView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lcq-JR-dMW" firstAttribute="top" secondItem="Grx-Yh-X5s" secondAttribute="top" id="KYB-yJ-OwC"/>
+                            <constraint firstAttribute="centerX" secondItem="Lcq-JR-dMW" secondAttribute="centerX" id="oWq-Zu-uyd"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="dlj-zj-w54"/>
+                                <exclude reference="Lcq-JR-dMW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KYB-yJ-OwC"/>
+                                <exclude reference="oWq-Zu-uyd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="dlj-zj-w54"/>
+                                <include reference="Lcq-JR-dMW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KYB-yJ-OwC"/>
+                                <include reference="oWq-Zu-uyd"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAV-8K-lxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4963.5" y="1671"/>
+            <point key="canvasLocation" x="5239.5" y="1683"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="f7W-iD-zRc">

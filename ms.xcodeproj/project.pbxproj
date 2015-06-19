@@ -16,6 +16,7 @@
 		4A817CF31B32824B007C8AA4 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */; };
 		4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */; };
 		4A817CF81B33A5B8007C8AA4 /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */; };
+		4A817CFA1B33F86D007C8AA4 /* SocialWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF91B33F86D007C8AA4 /* SocialWebViewController.swift */; };
 		4ABB9EED1AA2F05B00A72F08 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */; };
 		4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */; };
 		4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC267E41A6E3CDB00AA6478 /* Location.m */; };
@@ -64,6 +65,7 @@
 		4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
 		4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
+		4A817CF91B33F86D007C8AA4 /* SocialWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialWebViewController.swift; sourceTree = "<group>"; };
 		4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
 		4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocialViewController.swift; sourceTree = "<group>"; };
 		4AC267D71A6E1F5C00AA6478 /* ms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ms-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */,
 				4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */,
+				4A817CF91B33F86D007C8AA4 /* SocialWebViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				4AEFB2C51B11CA4E008FC58A /* AlbumViewController.swift in Sources */,
 				4A2886351B2F8A0900919FB7 /* MissedTableViewCell.swift in Sources */,
 				4AEFB2BB1B1192BA008FC58A /* UserPhotos.swift in Sources */,
+				4A817CFA1B33F86D007C8AA4 /* SocialWebViewController.swift in Sources */,
 				4A2886371B2FC9CE00919FB7 /* GetMissed.swift in Sources */,
 				4A817CF11B328209007C8AA4 /* SocialViewController.swift in Sources */,
 				4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */,
