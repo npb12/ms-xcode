@@ -38,10 +38,20 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image:UIImage = user.getImage()
-        println(image)
+        let defaults = NSUserDefaults.standardUserDefaults()
         
-        picture0.setImage(image, forState: .Normal)
+        let image0:UIImage = user.getImage(0)
+         let image1:UIImage = user.getImage(1)
+         let image2:UIImage = user.getImage(2)
+         let image3:UIImage = user.getImage(3)
+         let image4:UIImage = user.getImage(4)
+        
+        
+        picture0.setImage(image0, forState: .Normal)
+        picture1.setImage(image1, forState: .Normal)
+        picture2.setImage(image2, forState: .Normal)
+        picture3.setImage(image3, forState: .Normal)
+        picture4.setImage(image4, forState: .Normal)
         
         
         FBtextview.text = String(self.user.getName())
@@ -56,6 +66,20 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         Linkedintextfield.delegate = self
         Snapchattextfield.delegate = self
         
+        
+        if defaults.objectForKey("instagram") != nil {
+            Instagramtextfield.text = user.getInstagramName()
+            
+        }
+        
+        if defaults.objectForKey("linkedin") != nil {
+            Linkedintextfield.text = user.getLinkedinName()
+        }
+        
+        if defaults.objectForKey("snapchat") != nil {
+            Snapchattextfield.text = user.getSnapchatName()
+        }
+        
 
     }
     
@@ -68,10 +92,46 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if(self.Instagramtextfield.text != nil)
+        {
+            user.setInstagramName(Instagramtextfield.text)
+        }
+        
+        if(self.Linkedintextfield.text != nil)
+        {
+            user.setLinkedinURL(Linkedintextfield.text)
+        }
+        
+        if(self.Snapchattextfield.text != nil)
+        {
+            user.setSnapchatName(Snapchattextfield.text)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return false
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        
+        return true
+    }
+    
+
     
     
 

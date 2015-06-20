@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/MySocialViewController.swift"
-            timestampString = "455417485.108618"
+            timestampString = "456474573.082908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "MySocialViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/AlbumViewController.swift"
-            timestampString = "455417550.569042"
+            timestampString = "456464898.848439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "AlbumViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -408,12 +408,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/User.swift"
-            timestampString = "455422926.224041"
+            timestampString = "456476955.760025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "getImage()"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "getImage(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

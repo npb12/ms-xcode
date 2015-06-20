@@ -72,6 +72,8 @@ class User{
     
     func getInstagramName()-> String
     {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        self.instagram_name = defaults.stringForKey("instagram")
         
       return self.instagram_name!
         
@@ -80,6 +82,8 @@ class User{
     
     func getLinkedinName()-> String
     {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        self.linkedin_url = defaults.stringForKey("linkedin")
         
         return self.linkedin_url!
         
@@ -89,6 +93,9 @@ class User{
     func getSnapchatName()-> String
     {
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        self.snapchat_name = defaults.stringForKey("snapchat")
+        
         return self.snapchat_name!
         
         
@@ -96,34 +103,46 @@ class User{
   
     func setImage(image: UIImage){
         
-        
+        let defaults = NSUserDefaults.standardUserDefaults()
+
    
         let imageData = UIImagePNGRepresentation(image)
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        let imagePath = paths.stringByAppendingPathComponent("cached.png")
         
-        if !imageData.writeToFile(imagePath, atomically: false)
+        for i in 0...4
         {
-            println("not saved")
-        } else {
-            println("saved")
-            NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
+            println("imagePath\(i)")
+            if defaults.objectForKey("imagePath\(i)") === nil {
+
+            let path = "user_image\(i)"
+            println(path)
+            let imagePath = paths.stringByAppendingPathComponent(path)
+            println(imagePath)
+
+        
+            if !imageData.writeToFile(imagePath, atomically: false)
+            {
+                println("not saved")
+            }   else {
+                println("saved")
+                NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath\(i)")
+                NSUserDefaults.standardUserDefaults().synchronize()
+
+            }
+             
+              break
+            }
+            
         }
         
     }
-    
-    
-    
-    
-    
-    
-    func getImage()->UIImage
+    /*
+    */
+    func getImage(i: Int)->UIImage
     {
         
         let default_image = UIImage(named: "default_image") as UIImage?
-        
-        println("ehllo")
-
+    
         
         let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
         let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
@@ -133,9 +152,10 @@ class User{
             {
                 if let dirPath = paths[0] as? String
                 {
-                    if let readPath = dirPath.stringByAppendingPathComponent("cached.png") as String?{
+                    let path = "user_image\(i)"
+                    if let readPath = dirPath.stringByAppendingPathComponent(path) as String?{
                         if let image = UIImage(contentsOfFile: readPath){
-                            println("helllo")
+                            println(path)
                             return image
                         }
                     }

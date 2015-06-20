@@ -57,8 +57,9 @@ class AlbumViewController:UITableViewController{
         
        
         let photo = self.sources[indexPath.row] as UIImage
+
         user.setImage(photo)
-        println(photo)
+       // println(photo)
         singlePhotoViewController?.photo = photo
         //println(singlePhotoViewController?.photo)
       //  performSegueWithIdentifier("ShowEachSegue", sender: self)
