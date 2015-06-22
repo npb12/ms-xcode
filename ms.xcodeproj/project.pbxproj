@@ -17,7 +17,6 @@
 		4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */; };
 		4A817CF81B33A5B8007C8AA4 /* UserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */; };
 		4A817CFA1B33F86D007C8AA4 /* SocialWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A817CF91B33F86D007C8AA4 /* SocialWebViewController.swift */; };
-		4ABB9EED1AA2F05B00A72F08 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */; };
 		4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */; };
 		4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC267E41A6E3CDB00AA6478 /* Location.m */; };
 		4AC597A11A85D7E600A60F2A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */; };
@@ -66,7 +65,6 @@
 		4A817CF51B33A450007C8AA4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		4A817CF71B33A5B8007C8AA4 /* UserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4A817CF91B33F86D007C8AA4 /* SocialWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialWebViewController.swift; sourceTree = "<group>"; };
-		4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
 		4ABB9EF11AA2F39A00A72F08 /* MySocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocialViewController.swift; sourceTree = "<group>"; };
 		4AC267D71A6E1F5C00AA6478 /* ms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ms-Bridging-Header.h"; sourceTree = "<group>"; };
 		4AC267E41A6E3CDB00AA6478 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = SOURCE_ROOT; };
@@ -207,7 +205,6 @@
 				CFE490791A545A0800D66D5A /* AppDelegate.swift */,
 				4ACA934C1A95A46600808F3F /* LandingViewController.swift */,
 				4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */,
-				4ABB9EE81AA2F05A00A72F08 /* EncounterViewController.swift */,
 				4ACC0DCA1A760B8900CF74C4 /* ServerManagement.swift */,
 				4ACC0DC61A70CA8D00CF74C4 /* CoreDataManagement.swift */,
 				4ACC0DC81A744A6200CF74C4 /* CoreDataToServer.swift */,
@@ -378,7 +375,6 @@
 				4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */,
 				4AEFB2C11B119703008FC58A /* AlbumsViewController.swift in Sources */,
 				4AC7CFF61B0E92EB001D48B4 /* SnapchatBox.swift in Sources */,
-				4ABB9EED1AA2F05B00A72F08 /* EncounterViewController.swift in Sources */,
 				4ACC0DCB1A760B8900CF74C4 /* ServerManagement.swift in Sources */,
 				CFE4907D1A545A0800D66D5A /* ms.xcdatamodeld in Sources */,
 				4ACA934D1A95A46600808F3F /* LandingViewController.swift in Sources */,

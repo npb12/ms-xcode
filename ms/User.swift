@@ -109,14 +109,9 @@ class User{
         let imageData = UIImagePNGRepresentation(image)
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         
-        for i in 0...4
-        {
-            println("imagePath\(i)")
-            if defaults.objectForKey("imagePath\(i)") === nil {
+            println("imagePath")
 
-            let path = "user_image\(i)"
-            println(path)
-            let imagePath = paths.stringByAppendingPathComponent(path)
+            let imagePath = paths.stringByAppendingPathComponent("user_image")
             println(imagePath)
 
         
@@ -125,24 +120,21 @@ class User{
                 println("not saved")
             }   else {
                 println("saved")
-                NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath\(i)")
+                NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
                 NSUserDefaults.standardUserDefaults().synchronize()
 
             }
-             
-              break
-            }
+
             
-        }
         
     }
     /*
     */
-    func getImage(i: Int)->UIImage
+    func getImage0()->UIImage
     {
         
         let default_image = UIImage(named: "default_image") as UIImage?
-    
+        
         
         let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
         let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
@@ -152,10 +144,8 @@ class User{
             {
                 if let dirPath = paths[0] as? String
                 {
-                    let path = "user_image\(i)"
-                    if let readPath = dirPath.stringByAppendingPathComponent(path) as String?{
+                    if let readPath = dirPath.stringByAppendingPathComponent("user_image") as String?{
                         if let image = UIImage(contentsOfFile: readPath){
-                            println(path)
                             return image
                         }
                     }
@@ -165,9 +155,129 @@ class User{
         
         
         return default_image!
-
+        
+        
+    }
+    /*
+    func getImage1()->UIImage
+    {
+        
+        let default_image = UIImage(named: "default_image") as UIImage?
+        
+        
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        {
+            if paths.count > 0
+            {
+                if let dirPath = paths[0] as? String
+                {
+                    let path = "user_image1"
+                    if let readPath = dirPath.stringByAppendingPathComponent("user_image1") as String?{
+                        if let image = UIImage(contentsOfFile: readPath){
+                            return image
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return default_image!
+        
         
     }
     
+    func getImage2()->UIImage
+    {
+        
+        let default_image = UIImage(named: "default_image") as UIImage?
+        
+        
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        {
+            if paths.count > 0
+            {
+                if let dirPath = paths[0] as? String
+                {
+                    let path = "user_image2"
+                    if let readPath = dirPath.stringByAppendingPathComponent("user_image2") as String?{
+                        if let image = UIImage(contentsOfFile: readPath){
+                            return image
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return default_image!
+        
+        
+    }
+    
+    func getImage3()->UIImage
+    {
+        
+        let default_image = UIImage(named: "default_image") as UIImage?
+        
+        
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        {
+            if paths.count > 0
+            {
+                if let dirPath = paths[0] as? String
+                {
+                    let path = "user_image3"
+                    if let readPath = dirPath.stringByAppendingPathComponent("user_image3") as String?{
+                        if let image = UIImage(contentsOfFile: readPath){
+                            return image
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return default_image!
+        
+        
+    }
+    
+    func getImage4()->UIImage
+    {
+        
+        let default_image = UIImage(named: "default_image") as UIImage?
+        
+        
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask    = NSSearchPathDomainMask.UserDomainMask
+        if let paths            = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        {
+            if paths.count > 0
+            {
+                if let dirPath = paths[0] as? String
+                {
+                    let path = "user_image4"
+                    if let readPath = dirPath.stringByAppendingPathComponent("user_image4") as String?{
+                        if let image = UIImage(contentsOfFile: readPath){
+                            return image
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        return default_image!
+        
+        
+    }
+    */
     
 }

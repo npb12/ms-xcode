@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class FacebookBox: UIButton {
 
@@ -14,6 +15,22 @@ class FacebookBox: UIButton {
     
     let checkbox = UIImage(named: "checkbox") as UIImage?
     let checkedbox = UIImage(named: "checkedbox") as UIImage?
+
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let checkedBox: NSString = "checkedIt"
+
+    
+    func setBox()
+    {
+        if self.defaults.objectForKey("FacebookCheckBox") == nil{
+            self.setImage(checkbox, forState: .Normal)
+            println("nooo")
+        }else{
+            self.setImage(checkedbox, forState: .Normal)
+            println("yessss")
+        }
+    }
+
     
     
     var isChecked:Bool = false{
@@ -23,14 +40,19 @@ class FacebookBox: UIButton {
             }else{
                 self.setImage(checkbox, forState: .Normal)
             }
-            
         }
     }
     
     
     override func awakeFromNib() {
         self.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.isChecked = false
+        if self.defaults.objectForKey("FacebookCheckBox") == nil{
+            self.isChecked = false
+        }else{
+            self.isChecked = true
+        }
+        
+        
     }
     
     
@@ -38,9 +60,14 @@ class FacebookBox: UIButton {
         if(sender == self){
             if isChecked == true{
                 isChecked = false
+                self.defaults.setObject(nil , forKey: "FacebookCheckBox")
+
             }else{
                 isChecked = true
+                self.defaults.setObject(checkedBox, forKey: "FacebookCheckBox")
+
             }
+            self.defaults.synchronize()
         }
         
         

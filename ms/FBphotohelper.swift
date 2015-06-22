@@ -73,7 +73,7 @@ class FBHelper{
             let graphData = result.valueForKey("data") as! Array<FBGraphObject>
             var albums = [AlbumModel] ()
             for obj:FBGraphObject in graphData{
-             //   println(obj.description)
+              //  println(obj.description)
                 let pictureURL = obj.valueForKey("picture") as! String
                 let url = NSURL(string: pictureURL)
                 let picData = NSData(contentsOfURL: url!)
@@ -118,7 +118,8 @@ class FBHelper{
         else{
 
 
-            let userImageURL = "https://graph.facebook.com/\(self.user.user_id)/picture?type=normal"
+            let userImageURL = "https://graph.facebook.com/\(self.user.user_id)/picture?=normal"
+            //?type=large"
             
             let url = NSURL(string: userImageURL)
             

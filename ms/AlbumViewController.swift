@@ -15,9 +15,13 @@ class AlbumViewController:UITableViewController{
     
     var albumModel:AlbumModel = AlbumModel(name: "", link: "", cover:"");
     var fbHelper:FBHelper?
-    var sources = [UIImage]();
+    var sources = [UIImage]()
     var photo:UIImage?
-    var frame: Int!
+    
+    struct frames {
+        static var frame: Int!
+
+    }
     
     var user = User()
     
@@ -59,7 +63,7 @@ class AlbumViewController:UITableViewController{
         let photo = self.sources[indexPath.row] as UIImage
 
         user.setImage(photo)
-       // println(photo)
+        println(photo)
         singlePhotoViewController?.photo = photo
         //println(singlePhotoViewController?.photo)
       //  performSegueWithIdentifier("ShowEachSegue", sender: self)

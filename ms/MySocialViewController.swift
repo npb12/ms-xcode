@@ -14,10 +14,17 @@ import UIKit
 
 
 class MySocialViewController: UIViewController, UITextFieldDelegate{
-    
+    let checkbox = UIImage(named: "checkbox") as UIImage?
+    let checkedbox = UIImage(named: "checkedbox") as UIImage?
     var user = User()
     let albumviewcontroller = AlbumViewController()
+    let fb = FacebookBox()
+    let insta = InstagramBox()
+    let snap = SnapchatBox()
+    let link = LinkedinBox()
+
     
+
     
     
     @IBOutlet weak var FBtextview: UITextView!
@@ -28,11 +35,10 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
 
     @IBOutlet weak var picture0: UIButton!
-    @IBOutlet weak var picture1: UIButton!
-    @IBOutlet weak var picture2: UIButton!
-    @IBOutlet weak var picture3: UIButton!
-    @IBOutlet weak var picture4: UIButton!
-    
+//    @IBOutlet weak var picture1: UIButton!
+//    @IBOutlet weak var picture2: UIButton!
+//    @IBOutlet weak var picture3: UIButton!
+//    @IBOutlet weak var picture4: UIButton!
     
     
     override func viewDidLoad() {
@@ -40,28 +46,41 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        let image0:UIImage = user.getImage(0)
-         let image1:UIImage = user.getImage(1)
-         let image2:UIImage = user.getImage(2)
-         let image3:UIImage = user.getImage(3)
-         let image4:UIImage = user.getImage(4)
+        let image0:UIImage = user.getImage0()
+      //   let image1:UIImage = user.getImage1()
+      //   let image2:UIImage = user.getImage2()
+     //    let image3:UIImage = user.getImage3()
+     //    let image4:UIImage = user.getImage4()
         
-        
-        picture0.setImage(image0, forState: .Normal)
-        picture1.setImage(image1, forState: .Normal)
-        picture2.setImage(image2, forState: .Normal)
-        picture3.setImage(image3, forState: .Normal)
-        picture4.setImage(image4, forState: .Normal)
+        println(image0)
+        picture0.setBackgroundImage(image0, forState: .Normal)
+   //     picture1.setImage(image1, forState: .Normal)
+   //     picture2.setImage(image2, forState: .Normal)
+  //      picture3.setImage(image3, forState: .Normal)
+  //      picture4.setImage(image4, forState: .Normal)
         
         
         FBtextview.text = String(self.user.getName())
         
         
         self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
-         self.picture1.addTarget(self, action: "picture1Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
-         self.picture2.addTarget(self, action: "picture2Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
-         self.picture3.addTarget(self, action: "picture3Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
-         self.picture4.addTarget(self, action: "picture4Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+
+        
+        fb.setBox()
+        insta.setBox()
+        snap.setBox()
+        link.setBox()
+        
+        
+        
+        
+        
+       //  self.picture1.addTarget(self, action: "picture1Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
+       //  self.picture2.addTarget(self, action: "picture2Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
+       //  self.picture3.addTarget(self, action: "picture3Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
+      //   self.picture4.addTarget(self, action: "picture4Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
         Instagramtextfield.delegate = self
         Linkedintextfield.delegate = self
         Snapchattextfield.delegate = self
@@ -79,6 +98,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         if defaults.objectForKey("snapchat") != nil {
             Snapchattextfield.text = user.getSnapchatName()
         }
+        
+        
         
 
     }
@@ -138,31 +159,31 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
     
     func picture0Tapped(sender: UIButton!) {
-        albumviewcontroller.frame = 0
-        println(albumviewcontroller.frame)
+        //albumviewcontroller.frames.frame = 0
+       // println(albumviewcontroller.frame)
     }
-    
+/*
     func picture1Tapped(sender: UIButton!) {
-        albumviewcontroller.frame = 1
-        println(albumviewcontroller.frame)
+        albumviewcontroller.frames.frame
+       // println(albumviewcontroller.frame)
     }
     
     func picture2Tapped(sender: UIButton!) {
-        albumviewcontroller.frame = 2
-        println(albumviewcontroller.frame)
+        albumviewcontroller.frames.frame = 2
+       // println(albumviewcontroller.frame)
     }
     
     func picture3Tapped(sender: UIButton!) {
-        albumviewcontroller.frame = 3
-        println(albumviewcontroller.frame)
+        albumviewcontroller.frames.frame = 3
+      //  println(albumviewcontroller.frame)
     }
     
     func picture4Tapped(sender: UIButton!) {
-        albumviewcontroller.frame = 4
-        println(albumviewcontroller.frame)
+        albumviewcontroller.frames.frame = 4
+      //  println(albumviewcontroller.frames.frame)
     }
     
-
+*/
     
     
 
