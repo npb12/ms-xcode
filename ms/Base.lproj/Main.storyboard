@@ -30,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnp-gY-6lU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053" y="-291.75"/>
+            <point key="canvasLocation" x="1069" y="-516"/>
         </scene>
         <!--My Social View Controller-->
         <scene sceneID="yvg-a3-t8M">
@@ -738,7 +738,7 @@
                     </tableView>
                     <connections>
                         <outlet property="albumTable" destination="fbU-xs-ESC" id="1aA-AR-GgV"/>
-                        <segue destination="ZZY-E0-olo" kind="show" identifier="photoSegue" id="kLU-jS-T2K"/>
+                        <segue destination="gRq-xI-2nT" kind="show" identifier="photoSegue" id="cPd-rt-bk3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJn-Le-HZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -748,8 +748,8 @@
         <!--AlbumViewController-->
         <scene sceneID="CUV-ZI-2v5">
             <objects>
-                <tableViewController id="ZZY-E0-olo" userLabel="AlbumViewController" customClass="AlbumViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r1r-dq-eSb">
+                <tableViewController id="ZZY-E0-olo" userLabel="AlbumViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="r1r-dq-eSb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -766,13 +766,95 @@
                             <outlet property="delegate" destination="ZZY-E0-olo" id="KBB-V5-B4T"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="3oW-ND-10T" kind="show" identifier="ShowEachSegue" id="cIl-Md-78i"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75T-XR-boT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3658.5" y="3316.5"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="xxO-cg-aPx">
+            <objects>
+                <collectionViewController id="gRq-xI-2nT" customClass="AlbumViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ijg-hj-q5a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G1X-WQ-sXL">
+                            <size key="itemSize" width="130" height="117"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell1" id="zyc-RI-JpC" customClass="AlbumViewControllerCell" customModule="ms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="117"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-Jn-6Ub" userLabel="photoimageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="117" id="6xI-7F-NJZ"/>
+                                                <constraint firstAttribute="width" constant="130" id="gjA-vb-0EZ"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="6xI-7F-NJZ"/>
+                                                    <exclude reference="gjA-vb-0EZ"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="6xI-7F-NJZ"/>
+                                                    <include reference="gjA-vb-0EZ"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="gvN-Jn-6Ub" firstAttribute="leading" secondItem="zyc-RI-JpC" secondAttribute="leading" id="M2a-bg-Wpn"/>
+                                    <constraint firstItem="gvN-Jn-6Ub" firstAttribute="top" secondItem="zyc-RI-JpC" secondAttribute="top" id="g1y-Fo-cTb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="gvN-Jn-6Ub"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="M2a-bg-Wpn"/>
+                                        <exclude reference="g1y-Fo-cTb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="gvN-Jn-6Ub"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="M2a-bg-Wpn"/>
+                                        <include reference="g1y-Fo-cTb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="photoimageView" destination="gvN-Jn-6Ub" id="fFz-yI-Tk2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gRq-xI-2nT" id="dO2-mr-2lk"/>
+                            <outlet property="delegate" destination="gRq-xI-2nT" id="334-P7-dsA"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="s5T-Kq-Dug"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Ijg-hj-q5a" id="LX8-9Z-tmO"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mw-VS-D6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5718" y="3312.75"/>
         </scene>
         <!--Single Photo View Controller-->
         <scene sceneID="eeK-pw-Rwi">
@@ -828,7 +910,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQM-zh-km7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4434" y="3316.5"/>
+            <point key="canvasLocation" x="6090" y="2161"/>
         </scene>
         <!--SocialVIewController-->
         <scene sceneID="0rf-ZW-z8Q">
@@ -1697,6 +1779,24 @@
             </objects>
             <point key="canvasLocation" x="1419" y="3316.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F1T-vP-UeB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1TJ-zk-G4z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qg9-HT-Pxo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gRq-xI-2nT" kind="relationship" relationship="rootViewController" id="KZw-wd-nlK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18D-Cl-F1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4800" y="3312.75"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Facebook-icon" width="512" height="512"/>
@@ -1708,6 +1808,7 @@
         <image name="checkbox" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cPd-rt-bk3"/>
         <segue reference="fLy-9Y-6uD"/>
     </inferredMetricsTieBreakers>
 </document>

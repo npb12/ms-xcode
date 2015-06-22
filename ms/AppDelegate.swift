@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var locationManager: CLLocationManager = CLLocationManager()
     let coreDataManagement = CoreDataManagement()
     var coreDataUsed = false
-
     
     
     
@@ -146,8 +145,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
         }
         
-        
-
         
         startWatchingLocation()
         return true

@@ -52,7 +52,6 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
      //    let image3:UIImage = user.getImage3()
      //    let image4:UIImage = user.getImage4()
         
-        println(image0)
         picture0.setBackgroundImage(image0, forState: .Normal)
    //     picture1.setImage(image1, forState: .Normal)
    //     picture2.setImage(image2, forState: .Normal)

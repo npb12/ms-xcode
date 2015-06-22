@@ -24,10 +24,8 @@ class FacebookBox: UIButton {
     {
         if self.defaults.objectForKey("FacebookCheckBox") == nil{
             self.setImage(checkbox, forState: .Normal)
-            println("nooo")
         }else{
             self.setImage(checkedbox, forState: .Normal)
-            println("yessss")
         }
     }
 
