@@ -97,9 +97,14 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AlbumViewControllerCell
         
+        //      cell.textLabel!.text = self.sources[indexPath.row] as String
+        //        let imageView = UIImageView(frame: CGRectMake(2, 2, 100, 100));
+        //        imageView.image = self.sources[indexPath.row];
+        //      cell.contentView.addSubview(imageView);
         cell.backgroundColor = UIColor.blackColor()
         cell.photoimageView.image = self.sources[indexPath.row]
-
+        //         println(self.sources[indexPath.row])
+        // Configure the cell
     
         return cell
     }
@@ -122,30 +127,9 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
         user.setImage(photo)
         println(photo)
         singlePhotoViewController?.photo = photo
+        //println(singlePhotoViewController?.photo)
+        //  performSegueWithIdentifier("ShowEachSegue", sender: self)
         return true
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsZero
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
-    }
-    
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        
-        
-        return 0
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        var totalHeight: CGFloat = (self.view.frame.width / 3)
-        var totalWidth: CGFloat = (self.view.frame.width / 3)
-        
-        return CGSizeMake(totalWidth, totalHeight)
     }
     
 

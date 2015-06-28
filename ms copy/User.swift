@@ -73,13 +73,7 @@ class User{
     func getInstagramName()-> String
     {
         let defaults = NSUserDefaults.standardUserDefaults()
-       if defaults.stringForKey("instagram") == nil {
-        
-          self.instagram_name = "INSTAGRAM NAME"
-        
-       }else{
-          self.instagram_name = defaults.stringForKey("instagram")
-        }
+        self.instagram_name = defaults.stringForKey("instagram")
         
       return self.instagram_name!
         
@@ -89,15 +83,7 @@ class User{
     func getLinkedinName()-> String
     {
         let defaults = NSUserDefaults.standardUserDefaults()
-
-        
-        if defaults.stringForKey("linkedin") == nil {
-            
-            self.linkedin_url = "LINKEDIN NAME"
-            
-        }else{
-            self.linkedin_url = defaults.stringForKey("linkedin")
-        }
+        self.linkedin_url = defaults.stringForKey("linkedin")
         
         return self.linkedin_url!
         
@@ -108,18 +94,7 @@ class User{
     {
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if defaults.stringForKey("snapchat") == nil {
-            
-            println("hello")
-
-            
-            self.snapchat_name = "SNAPCHAT NAME"
-            
-        }else{
-            
-            self.snapchat_name = defaults.stringForKey("snapchat")
-        }
+        self.snapchat_name = defaults.stringForKey("snapchat")
         
         return self.snapchat_name!
         

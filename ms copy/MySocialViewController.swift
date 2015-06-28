@@ -22,29 +22,19 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     let insta = InstagramBox()
     let snap = SnapchatBox()
     let link = LinkedinBox()
-    
-    
-  
-    
-    @IBOutlet weak var Snapchattextfield: UITextField!
 
-    @IBOutlet weak var FBtextview: UITextView!
     
-    @IBOutlet weak var Instagramtextfield: UITextField!
-    
-    @IBOutlet weak var Linkedintextfield: UITextField!
 
-  /*
+    
+    
     @IBOutlet weak var FBtextview: UITextView!
     @IBOutlet weak var Instagramtextfield: UITextField!
     @IBOutlet weak var Linkedintextfield: UITextField!
     @IBOutlet weak var Snapchattextfield: UITextField!
-  */
     
-    
+
 
     @IBOutlet weak var picture0: UIButton!
-
     
     
     override func viewDidLoad() {
@@ -65,19 +55,14 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
-        
+
         
         fb.setBox()
         insta.setBox()
         snap.setBox()
         link.setBox()
-        
-        
-        
-        
-        
 
-      Instagramtextfield.delegate = self
+        Instagramtextfield.delegate = self
         Linkedintextfield.delegate = self
         Snapchattextfield.delegate = self
         
@@ -87,7 +72,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
             
         }
         
-       if defaults.objectForKey("linkedin") != nil {
+        if defaults.objectForKey("linkedin") != nil {
             Linkedintextfield.text = user.getLinkedinName()
         }
         
@@ -96,28 +81,28 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         }
         
         
-     
         
+
     }
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
-        
-        
+
+      
+
         
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-      if(self.Instagramtextfield.text != nil)
+        if(self.Instagramtextfield.text != nil)
         {
             user.setInstagramName(Instagramtextfield.text)
         }
         
-          if(self.Linkedintextfield.text != nil)
+        if(self.Linkedintextfield.text != nil)
         {
             user.setLinkedinURL(Linkedintextfield.text)
         }
@@ -148,46 +133,18 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
+
     
     
-    
-    
-    
+
+
     
     func picture0Tapped(sender: UIButton!) {
         //albumviewcontroller.frames.frame = 0
-        // println(albumviewcontroller.frame)
+       // println(albumviewcontroller.frame)
     }
-    /*
-    func picture1Tapped(sender: UIButton!) {
-    albumviewcontroller.frames.frame
-    // println(albumviewcontroller.frame)
-    }
-    
-    func picture2Tapped(sender: UIButton!) {
-    albumviewcontroller.frames.frame = 2
-    // println(albumviewcontroller.frame)
-    }
-    
-    func picture3Tapped(sender: UIButton!) {
-    albumviewcontroller.frames.frame = 3
-    //  println(albumviewcontroller.frame)
-    }
-    
-    func picture4Tapped(sender: UIButton!) {
-    albumviewcontroller.frames.frame = 4
-    //  println(albumviewcontroller.frames.frame)
-    }
-    
-    */
-    
-    
-    
-    
-    
-    
-    
-    
-}
 
+        
+}
+    
     

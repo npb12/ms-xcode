@@ -11,7 +11,7 @@ import UIKit
 class MissedViewController: UIViewController, UITableViewDataSource{
     
 
-    var results = [UIImage(named: "profile"), UIImage(named: "profile2"), UIImage(named: "profile2"), UIImage(named: "profile2")]
+    var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
 
    
     override func viewDidLoad() {
