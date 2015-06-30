@@ -21,6 +21,7 @@ class AlbumsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet var albumTable: UITableView!
     
+    @IBOutlet var tableView: UITableView!
 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)

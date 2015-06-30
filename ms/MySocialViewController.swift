@@ -14,14 +14,14 @@ import UIKit
 
 
 class MySocialViewController: UIViewController, UITextFieldDelegate{
-    let checkbox = UIImage(named: "checkbox") as UIImage?
-    let checkedbox = UIImage(named: "checkedbox") as UIImage?
     var user = User()
     let albumviewcontroller = AlbumViewController()
+ //   let fbsettings = FBsettings()
     let fb = FacebookBox()
     let insta = InstagramBox()
     let snap = SnapchatBox()
     let link = LinkedinBox()
+    var sendServer = false
     
     
   
@@ -66,7 +66,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
         
         
-        
+//        fbsettings.settings()
         fb.setBox()
         insta.setBox()
         snap.setBox()
@@ -84,15 +84,20 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
         if defaults.objectForKey("instagram") != nil {
             Instagramtextfield.text = user.getInstagramName()
+            sendServer = true
             
         }
         
        if defaults.objectForKey("linkedin") != nil {
             Linkedintextfield.text = user.getLinkedinName()
+            sendServer = true
+
         }
         
         if defaults.objectForKey("snapchat") != nil {
             Snapchattextfield.text = user.getSnapchatName()
+            sendServer = true
+
         }
         
         
@@ -100,7 +105,18 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
     }
     
+/*    func setText()
+    {
+        
+        FBtextview.textColor = UIColor.lightGrayColor()
+    }
     
+    func resetText()
+    {
+        
+        FBtextview.textColor = UIColor.blackColor()
+    }
+    */
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
@@ -109,22 +125,37 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
     }
     
+    /*
+      uiimage -- user profile
+      instagram
+      snapchat
+      linkedin
+      facebook - true
+      Facebook -- public/private
+      instagram -- public/private
+      linkedin -- public/private
+      snapchat -- public/private
+    */
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
       if(self.Instagramtextfield.text != nil)
         {
             user.setInstagramName(Instagramtextfield.text)
+            //here 3
         }
         
           if(self.Linkedintextfield.text != nil)
         {
             user.setLinkedinURL(Linkedintextfield.text)
+            //here 2
         }
         
         if(self.Snapchattextfield.text != nil)
         {
             user.setSnapchatName(Snapchattextfield.text)
+            //here 3
         }
     }
     
