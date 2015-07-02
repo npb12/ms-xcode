@@ -18,6 +18,8 @@ class InstagramBox: UIButton {
     let defaults = NSUserDefaults.standardUserDefaults()
     let checkedBox: NSString = "checkedIt"
     
+    let user_server = UserServer()
+    
     
     func setBox()
     {
@@ -60,10 +62,12 @@ class InstagramBox: UIButton {
             if isChecked == true{
                 isChecked = false
                 self.defaults.setObject(nil , forKey: "InstagramCheckBox")
+                user_server.facebook_settings("public")
                 
             }else{
                 isChecked = true
                 self.defaults.setObject(checkedBox, forKey: "InstagramCheckBox")
+                user_server.facebook_settings("private")
                 
             }
             self.defaults.synchronize()

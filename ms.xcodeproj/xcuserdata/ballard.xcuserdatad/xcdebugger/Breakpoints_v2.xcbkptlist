@@ -25,12 +25,12 @@
                   symbolName = "ms.AppDelegate.window.getter : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "443600999.507139"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "457514632.754978"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
@@ -40,12 +40,12 @@
                   symbolName = "ms.AppDelegate.window.setter : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "443600999.510235"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "457514632.756147"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -55,12 +55,12 @@
                   symbolName = "ms.AppDelegate.window.materializeForSet : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "443600999.510527"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "457514632.756435"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -70,12 +70,12 @@
                   symbolName = "ms.AppDelegate.init (ms.AppDelegate.Type)() -&gt; ms.AppDelegate"
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neilballard/Downloads/ms/ms/AppDelegate.swift"
-                  timestampString = "443600999.510782"
+                  urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
+                  timestampString = "457514632.756706"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -200,7 +200,7 @@
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
-                  timestampString = "454811652.632757"
+                  timestampString = "457514633.769888"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -215,7 +215,7 @@
                   moduleName = "ms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/neilballard/Downloads/ms-5/ms/AppDelegate.swift"
-                  timestampString = "454811652.633102"
+                  timestampString = "457514633.770348"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/MySocialViewController.swift"
-            timestampString = "457166549.725429"
+            timestampString = "457511321.407313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256">
+            startingLineNumber = "298"
+            endingLineNumber = "298">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -342,11 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/AlbumViewController.swift"
-            timestampString = "456975444.671711"
+            timestampString = "457512406.287224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179">
+            startingLineNumber = "181"
+            endingLineNumber = "181">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -404,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ms/FacebookBox.swift"
-            timestampString = "456629180.382489"
+            timestampString = "457514220.62329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "FacebookBox"
             landmarkType = "3">
             <Locations>
@@ -506,22 +506,6 @@
                   offsetFromSymbolStart = "35">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ms/MySocialViewController.swift"
-            timestampString = "457330528.191185"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

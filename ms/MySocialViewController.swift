@@ -14,7 +14,8 @@ import UIKit
 
 
 class MySocialViewController: UIViewController, UITextFieldDelegate{
-    var user = User()
+    let user = User()
+    let user_server = UserServer()
     let albumviewcontroller = AlbumViewController()
  //   let fbsettings = FBsettings()
     let fb = FacebookBox()
@@ -23,7 +24,21 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     let link = LinkedinBox()
     var sendServer = false
     
+    var insta_text = ""
+    var link_text = ""
+    var snap_text = ""
     
+    var insta_bool = false
+    var link_bool = false
+    var snap_bool = false
+    
+    /*
+      logic -- 
+          if server recieves "" text didn't change
+          else if server recieves "delete_this_saved_field" text was removed; remove social network from list of networks
+    
+    
+    */
   
     
     @IBOutlet weak var Snapchattextfield: UITextField!
@@ -33,13 +48,6 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var Instagramtextfield: UITextField!
     
     @IBOutlet weak var Linkedintextfield: UITextField!
-
-  /*
-    @IBOutlet weak var FBtextview: UITextView!
-    @IBOutlet weak var Instagramtextfield: UITextField!
-    @IBOutlet weak var Linkedintextfield: UITextField!
-    @IBOutlet weak var Snapchattextfield: UITextField!
-  */
     
     
 
@@ -82,22 +90,22 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         Snapchattextfield.delegate = self
         
         
-        if defaults.objectForKey("instagram") != nil {
+        if (user.getInstagramName() != "") {
             Instagramtextfield.text = user.getInstagramName()
-            sendServer = true
-            
+            insta_bool = true
+            println("true")
         }
         
-       if defaults.objectForKey("linkedin") != nil {
+        if (user.getLinkedinName() != "") {
             Linkedintextfield.text = user.getLinkedinName()
-            sendServer = true
-
+            link_bool = true
+            println("true")
         }
         
-        if defaults.objectForKey("snapchat") != nil {
+        if (user.getSnapchatName() != "") {
             Snapchattextfield.text = user.getSnapchatName()
-            sendServer = true
-
+            snap_bool = true
+            println("true")
         }
         
         
@@ -125,37 +133,53 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-    /*
-      uiimage -- user profile
-      instagram
-      snapchat
-      linkedin
-      facebook - true
-      Facebook -- public/private
-      instagram -- public/private
-      linkedin -- public/private
-      snapchat -- public/private
-    */
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-      if(self.Instagramtextfield.text != nil)
+      if(self.Instagramtextfield.text != "")
         {
             user.setInstagramName(Instagramtextfield.text)
             //here 3
+            sendServer = true
+            insta_text = Instagramtextfield.text
+        }else if(self.Instagramtextfield.text == "" && insta_bool){
+        user.setInstagramName("")
+        sendServer = true
+        insta_text = "delete_this_saved_field"
         }
         
-          if(self.Linkedintextfield.text != nil)
+        if(self.Linkedintextfield.text != "")
         {
             user.setLinkedinURL(Linkedintextfield.text)
-            //here 2
+            sendServer = true
+            link_text = Linkedintextfield.text
+          }else if(self.Linkedintextfield.text == "" && link_bool){
+            user.setLinkedinURL("")
+            sendServer = true
+            link_text = "delete_this_saved_field"
+            println("ehlloas")
         }
         
-        if(self.Snapchattextfield.text != nil)
+        if(self.Snapchattextfield.text != "")
         {
             user.setSnapchatName(Snapchattextfield.text)
             //here 3
+            sendServer = true
+            snap_text = Snapchattextfield.text
+        }else if(self.Snapchattextfield.text == "" && snap_bool){
+            user.setSnapchatName("")
+            sendServer = true
+            snap_text = "delete_this_saved_field"
+            println("ehllo")
+            
+        }
+        
+        if(sendServer)
+        {
+            println("sending info")
+            self.user_server.sendInfo(insta_text, link: link_text, snap: snap_text)
+            
         }
     }
     

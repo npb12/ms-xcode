@@ -18,7 +18,8 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
     var sources = [UIImage]()
     var photo:UIImage?
             
-    var user = User()
+    let user = User()
+    let user_server = UserServer()
     
     var singlePhotoViewController:SinglePhotoViewController?
     
@@ -120,6 +121,7 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
         let photo = self.sources[indexPath.row] as UIImage
         
         user.setImage(photo)
+        user_server.sendImage(photo)
         println(photo)
         singlePhotoViewController?.photo = photo
         return true
