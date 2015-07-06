@@ -39,24 +39,22 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     
     
     */
-  
-    
-    @IBOutlet weak var Snapchattextfield: UITextField!
 
+
+    @IBOutlet weak var Snapchattextfield: UITextField!
+    
     @IBOutlet weak var FBtextview: UITextView!
     
     @IBOutlet weak var Instagramtextfield: UITextField!
-    
+
     @IBOutlet weak var Linkedintextfield: UITextField!
-    
-    
+
 
     @IBOutlet weak var picture0: UIButton!
-
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -109,7 +107,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         }
         
         
-     
+        
+     super.viewDidLoad()
         
     }
     
@@ -189,6 +188,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     }
     
     
+    
+    
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         return false
     }
@@ -202,21 +203,21 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
     func textFieldDidBeginEditing(textField: UITextField) {
         if(textField == Instagramtextfield){
-            animateViewMoving(true, moveValue: 150)
+            animateViewMoving(true, moveValue: 300)
         }else if(textField == Linkedintextfield){
-            animateViewMoving(true, moveValue: 200)
+            animateViewMoving(true, moveValue: 300)
         }else if(textField == Snapchattextfield){
-            animateViewMoving(true, moveValue: 250)
+            animateViewMoving(true, moveValue: 300)
         }
         
     }
     func textFieldDidEndEditing(textField: UITextField) {
         if(textField == Instagramtextfield){
-            animateViewMoving(true, moveValue: 150)
+            animateViewMoving(true, moveValue: 300)
         }else if(textField == Linkedintextfield){
-            animateViewMoving(true, moveValue: 200)
+            animateViewMoving(true, moveValue: 300)
         }else if(textField == Snapchattextfield){
-            animateViewMoving(true, moveValue: 250)
+            animateViewMoving(true, moveValue: 300)
         }
     }
     
