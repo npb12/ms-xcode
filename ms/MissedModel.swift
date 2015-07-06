@@ -21,13 +21,13 @@ class MissedModel{
   
 
 
-    init(userid:String, name:String, photo:String, pub:String, amount:String){
+    init(userid:String, name:String, photo:String){
     
       self.userid = userid
       self.name = name
       self.photo = photo
-      self.pub = pub
-      self.amount = amount
+      //self.pub = pub
+      //self.amount = amount
 
     }
 

@@ -188,9 +188,6 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
-    }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         return false
@@ -201,6 +198,36 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
         
         return true
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if(textField == Instagramtextfield){
+            animateViewMoving(true, moveValue: 150)
+        }else if(textField == Linkedintextfield){
+            animateViewMoving(true, moveValue: 200)
+        }else if(textField == Snapchattextfield){
+            animateViewMoving(true, moveValue: 250)
+        }
+        
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        if(textField == Instagramtextfield){
+            animateViewMoving(true, moveValue: 150)
+        }else if(textField == Linkedintextfield){
+            animateViewMoving(true, moveValue: 200)
+        }else if(textField == Snapchattextfield){
+            animateViewMoving(true, moveValue: 250)
+        }
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        var movementDuration:NSTimeInterval = 0.3
+        var movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
     }
     
     

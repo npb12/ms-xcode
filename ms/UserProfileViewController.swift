@@ -11,8 +11,8 @@ import UIKit
 class UserProfileViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var PhotoView:UIImageView!
-    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableView: UITableView!
     
     var social_image = [UIImage(named: "Facebook-icon"), UIImage(named: "Linkedin-icon")]
     var social_text: [String] = ["Facebook", "Linkedin"]
@@ -24,10 +24,10 @@ class UserProfileViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.PhotoView.image = self.image1
+ //       self.PhotoView.image = self.profile
         // Do any additional setup after loading the view.
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+       self.tableView.tableFooterView = UIView(frame: CGRectZero)
        // self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "usersocialCell")
 
     }

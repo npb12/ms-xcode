@@ -10,7 +10,7 @@ import UIKit
 
 class SocialTableViewCell: UITableViewCell {
     
-    @IBOutlet var socialImageView:UIImageView!
+    @IBOutlet weak var socialImageView: UIImageView!
     
     var social:AnyObject?{
         didSet{

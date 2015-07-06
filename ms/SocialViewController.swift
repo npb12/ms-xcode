@@ -12,9 +12,13 @@ class SocialViewController: UIViewController, UITableViewDataSource {
     
     var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+
         
         // Do any additional setup after loading the view.
     }

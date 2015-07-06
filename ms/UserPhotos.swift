@@ -9,7 +9,6 @@
 import Foundation
 
 
-import Foundation
 class User_Photos{
 
     let image:UIImage

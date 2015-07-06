@@ -50,10 +50,10 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
         // Register cell classes
        // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("photoExecuted:"), name: "photoNotification", object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("coverPhotoExecuted:"), name: "coverPhotoNotification", object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("photoExecuted:"), name: "photoNotification", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("coverPhotoExecuted:"), name: "coverPhotoNotification", object: nil)
         
-        self.navigationItem.title = self.albumModel.name;
+        self.navigationItem.title = self.albumModel.name
 
         // Do any additional setup after loading the view.
     }
