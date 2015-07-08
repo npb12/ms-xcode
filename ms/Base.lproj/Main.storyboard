@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OXu-M8-kCf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fbE-jf-AO6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -34,120 +34,12 @@
                     </view>
                     <connections>
                         <outlet property="fbLoginView" destination="nNt-gb-w7R" id="KYy-Kw-MDm"/>
-                        <segue destination="Mm6-vV-Pe2" kind="presentation" identifier="HomeViewController" id="fLy-9Y-6uD"/>
+                        <segue destination="Mm6-vV-Pe2" kind="show" identifier="HomeViewController" id="fLy-9Y-6uD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnp-gY-6lU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="-516"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fz7-ls-FKF">
-            <objects>
-                <viewController id="73m-1G-Yf5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MUn-eT-kim"/>
-                        <viewControllerLayoutGuide type="bottom" id="tsP-tO-Cps"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wTY-pB-chy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-Db-sHE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nuW-xT-DXM">
-                                        <rect key="frame" x="100" y="299" width="400" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Smc-gE-sof"/>
-                                        </constraints>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="309" width="400" height="1"/>
-                                        </variation>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tjM-jx-9I6">
-                                        <rect key="frame" x="100" y="300" width="400" height="450"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJL-1N-bIq">
-                                                <rect key="frame" x="20" y="41" width="360" height="1"/>
-                                                <color key="backgroundColor" red="0.43529411759999997" green="0.6588235294" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="6bz-lv-UEz"/>
-                                                    <constraint firstAttribute="width" constant="360" id="hbf-DN-Gya"/>
-                                                </constraints>
-                                            </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Networks" translatesAutoresizingMaskIntoConstraints="NO" id="X1C-zz-pHe">
-                                                <rect key="frame" x="40" y="8" width="150" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="lFX-gR-bga"/>
-                                                    <constraint firstAttribute="width" constant="150" id="nLY-OY-lfc"/>
-                                                </constraints>
-                                                <color key="textColor" red="0.43529411759999997" green="0.6588235294" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="X1C-zz-pHe" firstAttribute="top" secondItem="tjM-jx-9I6" secondAttribute="top" constant="8" id="1gs-pI-SPp"/>
-                                            <constraint firstAttribute="centerX" secondItem="kJL-1N-bIq" secondAttribute="centerX" id="2LB-P5-IYf"/>
-                                            <constraint firstAttribute="width" constant="400" id="DVb-IG-Yy4"/>
-                                            <constraint firstAttribute="height" constant="450" id="FUN-gK-cUF"/>
-                                            <constraint firstItem="kJL-1N-bIq" firstAttribute="top" secondItem="X1C-zz-pHe" secondAttribute="bottom" constant="3" id="q0B-HN-PqU"/>
-                                            <constraint firstItem="X1C-zz-pHe" firstAttribute="leading" secondItem="tjM-jx-9I6" secondAttribute="leading" constant="40" id="sQh-lJ-IKY"/>
-                                        </constraints>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="310" width="400" height="450"/>
-                                            <mask key="constraints">
-                                                <exclude reference="DVb-IG-Yy4"/>
-                                                <exclude reference="FUN-gK-cUF"/>
-                                                <exclude reference="1gs-pI-SPp"/>
-                                                <exclude reference="sQh-lJ-IKY"/>
-                                                <exclude reference="2LB-P5-IYf"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nuW-xT-DXM" secondAttribute="trailing" id="L7i-Fj-L9n"/>
-                                    <constraint firstItem="nuW-xT-DXM" firstAttribute="leading" secondItem="tPt-Db-sHE" secondAttribute="leading" id="ga6-js-gUc"/>
-                                    <constraint firstAttribute="centerX" secondItem="tjM-jx-9I6" secondAttribute="centerX" id="glU-tM-Wg4"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="L7i-Fj-L9n"/>
-                                        <exclude reference="ga6-js-gUc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="-20" width="400" height="800"/>
-                                    <mask key="constraints">
-                                        <include reference="L7i-Fj-L9n"/>
-                                        <include reference="ga6-js-gUc"/>
-                                        <exclude reference="glU-tM-Wg4"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="tPt-Db-sHE"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="tPt-Db-sHE"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2bd-zy-SLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1563" y="3312.75"/>
+            <point key="canvasLocation" x="1080" y="-291"/>
         </scene>
         <!--My.Social-->
         <scene sceneID="yvg-a3-t8M">
@@ -432,7 +324,7 @@
                                             <constraint firstAttribute="height" constant="30" id="xm3-Ny-D6x"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="2ZH-sy-IhY"/>
@@ -810,6 +702,8 @@
                         <outlet property="Instagramtextfield" destination="3HC-bW-fSl" id="LRU-tK-8fz"/>
                         <outlet property="Linkedintextfield" destination="Udj-U8-rJ2" id="ovf-97-BAH"/>
                         <outlet property="Snapchattextfield" destination="1bI-z5-1JG" id="8H2-8s-w3I"/>
+                        <outlet property="infoView" destination="vpv-ZA-3A2" id="QKE-I0-75h"/>
+                        <outlet property="picView" destination="k33-v1-PGW" id="B2s-zF-raZ"/>
                         <outlet property="picture0" destination="nX3-gv-4c6" id="YA7-0f-QQP"/>
                     </connections>
                 </viewController>
@@ -1337,10 +1231,10 @@
             </objects>
             <point key="canvasLocation" x="5239.5" y="1683"/>
         </scene>
-        <!--Missed.Social-->
+        <!--HomeViewController-->
         <scene sceneID="f7W-iD-zRc">
             <objects>
-                <tabBarController storyboardIdentifier="HomeViewController" id="Mm6-vV-Pe2" customClass="HomeViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" id="Mm6-vV-Pe2" userLabel="HomeViewController" customClass="HomeViewController" customModule="ms" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Missed.Social" id="gmm-zs-B3l"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="100" id="axm-A0-gdC">

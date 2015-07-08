@@ -37,8 +37,6 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To avoid any missed.social encounters.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To avoid any missed.social encounters. </string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

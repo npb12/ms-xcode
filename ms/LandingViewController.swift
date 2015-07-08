@@ -17,16 +17,23 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet var fbLoginView : FBLoginView!
     
     
-   override func viewDidAppear(animated: Bool) {
-      //  let serverManagement = ServerManagement()
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    override func viewDidLoad() {
         //serverManagement.serverGet()
         
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
+        
+        
+        super.viewDidLoad()
+    }
+    
+    
+   override func viewDidAppear(animated: Bool) {
+      //  let serverManagement = ServerManagement()
+        
+        super.viewDidAppear(true)
+    // Do any additional setup after loading the view, typically from a nib.
+    
         
     }
     
@@ -86,8 +93,6 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
                 }
                 
             }
-            
-            self.performSegueWithIdentifier("HomeViewController", sender: self)
         }
     }
         
@@ -150,6 +155,7 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
     let defaults = NSUserDefaults.standardUserDefaults()
     defaults.setObject("loggedIn", forKey: "userLoggedIn")
     defaults.synchronize()
+    self.performSegueWithIdentifier("HomeViewController", sender: self)
     }
     
     func updateUserLoggedOutFlag() {

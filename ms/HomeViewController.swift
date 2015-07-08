@@ -16,6 +16,9 @@ class HomeViewController: UITabBarController {
     //let serverManagement = ServerManagement()
     
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     
     override func viewDidAppear(animated: Bool) {

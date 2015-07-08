@@ -52,6 +52,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var picture0: UIButton!
     
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var picView: UIView!
     
     override func viewDidLoad() {
         
@@ -105,6 +107,9 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
             snap_bool = true
             println("true")
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
         
         
         
@@ -188,7 +193,33 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     }
     
     
+    func keyboardWillShow(sender: NSNotification) {
+        println(sender)
+        self.picView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.infoView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.picView.frame.origin.y -= 150
+        self.infoView.frame.origin.y -= 150
+    }
     
+    func keyboardWillHide(sender: NSNotification) {
+        self.picView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.infoView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.picView.frame.origin.y += 150
+        self.infoView.frame.origin.y += 150
+    }
+    
+    
+
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)  {
+        if let touch =  touches.first as? UITouch {
+            self.infoView.endEditing(true)
+        }
+        
+        super.touchesBegan(touches , withEvent:event)
+
+    }
+    
+    /*
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         return false
@@ -202,35 +233,14 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     }
 
     func textFieldDidBeginEditing(textField: UITextField) {
-        if(textField == Instagramtextfield){
-            animateViewMoving(true, moveValue: 300)
-        }else if(textField == Linkedintextfield){
-            animateViewMoving(true, moveValue: 300)
-        }else if(textField == Snapchattextfield){
-            animateViewMoving(true, moveValue: 300)
-        }
-        
+
     }
+    
     func textFieldDidEndEditing(textField: UITextField) {
-        if(textField == Instagramtextfield){
-            animateViewMoving(true, moveValue: 300)
-        }else if(textField == Linkedintextfield){
-            animateViewMoving(true, moveValue: 300)
-        }else if(textField == Snapchattextfield){
-            animateViewMoving(true, moveValue: 300)
-        }
+
     }
     
-    func animateViewMoving (up:Bool, moveValue :CGFloat){
-        var movementDuration:NSTimeInterval = 0.3
-        var movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
-        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
-        UIView.commitAnimations()
-    }
-    
+*/
     
     
     
@@ -241,6 +251,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         //albumviewcontroller.frames.frame = 0
         // println(albumviewcontroller.frame)
     }
+    
+    
     /*
     func picture1Tapped(sender: UIButton!) {
     albumviewcontroller.frames.frame
