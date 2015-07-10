@@ -73,7 +73,7 @@ class MissedViewController: UIViewController, UITableViewDataSource{
      */
     
     override func viewDidLoad() {
-        
+                
    //     let user_id = user.getUserID()
         
         //    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("executeMissedHandle:"), name: "PostInfo", object: nil)

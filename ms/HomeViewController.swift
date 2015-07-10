@@ -17,6 +17,8 @@ class HomeViewController: UITabBarController {
     
 
     override func viewDidLoad() {
+    //    self.dismissViewControllerAnimated(flag: YES, completion: nil)
+
         super.viewDidLoad()
     }
 

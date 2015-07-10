@@ -12,7 +12,12 @@
 		4A2B92591B10125200583088 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B92581B10125200583088 /* User.swift */; };
 		4A2E46301B1D7F8E007C02E4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4A2E462F1B1D7F8E007C02E4 /* images */; };
 		4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E46341B257148007C02E4 /* MissedViewController.swift */; };
-		4A5E96E51B406BB000DEFDB8 /* FBsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E96E41B406BB000DEFDB8 /* FBsettings.swift */; };
+		4A5722521B4E44580057572C /* FBinclude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722511B4E44570057572C /* FBinclude.swift */; };
+		4A5722541B4E4A360057572C /* FBtextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722531B4E4A360057572C /* FBtextView.swift */; };
+		4A5722561B4F5A520057572C /* SocialHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722551B4F5A520057572C /* SocialHelper.swift */; };
+		4A57225A1B4F72980057572C /* UserSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722591B4F72980057572C /* UserSocialViewController.swift */; };
+		4A57225C1B4F730B0057572C /* UserSocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A57225B1B4F730B0057572C /* UserSocialTableViewCell.swift */; };
+		4A57225E1B4F74660057572C /* SocialInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A57225D1B4F74660057572C /* SocialInfoModel.swift */; };
 		4A5E96E71B42507B00DEFDB8 /* UserServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E96E61B42507B00DEFDB8 /* UserServer.swift */; };
 		4A5E96E91B4252F100DEFDB8 /* SocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E96E81B4252F100DEFDB8 /* SocialModel.swift */; };
 		4A5E96EB1B4256B200DEFDB8 /* MissedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E96EA1B4256B200DEFDB8 /* MissedModel.swift */; };
@@ -70,7 +75,12 @@
 		4A2B92581B10125200583088 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A2E462F1B1D7F8E007C02E4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		4A2E46341B257148007C02E4 /* MissedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedViewController.swift; sourceTree = "<group>"; };
-		4A5E96E41B406BB000DEFDB8 /* FBsettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBsettings.swift; sourceTree = "<group>"; };
+		4A5722511B4E44570057572C /* FBinclude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBinclude.swift; sourceTree = "<group>"; };
+		4A5722531B4E4A360057572C /* FBtextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBtextView.swift; sourceTree = "<group>"; };
+		4A5722551B4F5A520057572C /* SocialHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialHelper.swift; sourceTree = "<group>"; };
+		4A5722591B4F72980057572C /* UserSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSocialViewController.swift; sourceTree = "<group>"; };
+		4A57225B1B4F730B0057572C /* UserSocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSocialTableViewCell.swift; sourceTree = "<group>"; };
+		4A57225D1B4F74660057572C /* SocialInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialInfoModel.swift; sourceTree = "<group>"; };
 		4A5E96E61B42507B00DEFDB8 /* UserServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServer.swift; sourceTree = "<group>"; };
 		4A5E96E81B4252F100DEFDB8 /* SocialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
 		4A5E96EA1B4256B200DEFDB8 /* MissedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedModel.swift; sourceTree = "<group>"; };
@@ -158,6 +168,10 @@
 				4A817CF01B328209007C8AA4 /* SocialViewController.swift */,
 				4A817CF21B32824B007C8AA4 /* SocialTableViewCell.swift */,
 				4A5E96E81B4252F100DEFDB8 /* SocialModel.swift */,
+				4A5722551B4F5A520057572C /* SocialHelper.swift */,
+				4A57225D1B4F74660057572C /* SocialInfoModel.swift */,
+				4A5722591B4F72980057572C /* UserSocialViewController.swift */,
+				4A57225B1B4F730B0057572C /* UserSocialTableViewCell.swift */,
 			);
 			name = Social;
 			sourceTree = "<group>";
@@ -198,7 +212,8 @@
 				4AEFB2C81B159E5F008FC58A /* SinglePhotoViewController.swift */,
 				4ACA03301B37C92100CB31C1 /* AlbumViewController.swift */,
 				4A8C2E111B37EC05003027ED /* AlbumViewControllerCell.swift */,
-				4A5E96E41B406BB000DEFDB8 /* FBsettings.swift */,
+				4A5722511B4E44570057572C /* FBinclude.swift */,
+				4A5722531B4E4A360057572C /* FBtextView.swift */,
 			);
 			name = MySocial;
 			sourceTree = "<group>";
@@ -393,9 +408,12 @@
 				4AC7CFF01B0DBE53001D48B4 /* FacebookBox.swift in Sources */,
 				4A817CF31B32824B007C8AA4 /* SocialTableViewCell.swift in Sources */,
 				4A2B92591B10125200583088 /* User.swift in Sources */,
+				4A57225E1B4F74660057572C /* SocialInfoModel.swift in Sources */,
+				4A5722541B4E4A360057572C /* FBtextView.swift in Sources */,
 				4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */,
 				4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */,
 				4AEFB2BD1B119348008FC58A /* AlbumModel.swift in Sources */,
+				4A5722521B4E44580057572C /* FBinclude.swift in Sources */,
 				4A2886351B2F8A0900919FB7 /* MissedTableViewCell.swift in Sources */,
 				4AEFB2BB1B1192BA008FC58A /* UserPhotos.swift in Sources */,
 				4A817CFA1B33F86D007C8AA4 /* SocialWebViewController.swift in Sources */,
@@ -409,15 +427,17 @@
 				4ACA03311B37C92400CB31C1 /* AlbumViewController.swift in Sources */,
 				4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */,
 				4A5E96E91B4252F100DEFDB8 /* SocialModel.swift in Sources */,
+				4A57225A1B4F72980057572C /* UserSocialViewController.swift in Sources */,
 				4AEFB2C11B119703008FC58A /* AlbumsViewController.swift in Sources */,
 				4A5E96ED1B4258F300DEFDB8 /* UserProfileModel.swift in Sources */,
 				4AC7CFF61B0E92EB001D48B4 /* SnapchatBox.swift in Sources */,
+				4A5722561B4F5A520057572C /* SocialHelper.swift in Sources */,
 				4ACC0DCB1A760B8900CF74C4 /* ServerManagement.swift in Sources */,
 				CFE4907D1A545A0800D66D5A /* ms.xcdatamodeld in Sources */,
 				4ABF739A1B45F5FC006CCD92 /* UserMissedViewController.swift in Sources */,
 				4ACA934D1A95A46600808F3F /* LandingViewController.swift in Sources */,
-				4A5E96E51B406BB000DEFDB8 /* FBsettings.swift in Sources */,
 				4A5E96EB1B4256B200DEFDB8 /* MissedModel.swift in Sources */,
+				4A57225C1B4F730B0057572C /* UserSocialTableViewCell.swift in Sources */,
 				4ACC0DC71A70CA8D00CF74C4 /* CoreDataManagement.swift in Sources */,
 				4ABF739E1B463BB1006CCD92 /* MissedInfoModel.swift in Sources */,
 			);
@@ -551,14 +571,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/neilballard/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = ms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -573,14 +593,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/neilballard/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = ms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

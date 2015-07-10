@@ -1,17 +1,17 @@
 //
-//  MissedHelper.swift
+//  SocialHelper.swift
 //  ms
 //
-//  Created by Neil Ballard on 7/2/15.
+//  Created by Neil Ballard on 7/9/15.
 //  Copyright (c) 2015 Missed Social. All rights reserved.
 //
 
 import Foundation
 
 
-class MissedHelper{
+class SocialHelper{
     
-    func fetchMissed(userid:String)
+    func fetchSocial(userid:String)
     {
         
         
@@ -39,8 +39,8 @@ class MissedHelper{
                     
                     // here we capture what the server sends back, which should be the three items: userID, username, api_key
                     var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSArray
-                    var missed = [MissedModel] ()
-
+                    var social = [SocialModel] ()
+                    
                     
                     
                     if let json = jsonResult[0] as? Dictionary<String, AnyObject> {
@@ -53,19 +53,19 @@ class MissedHelper{
                                     let userID: String = uID as! String
                                     //self.storeUserID(userID)
                                     let picture: String = image as! String
-
+                                    
                                     
                                     //append
                                     
-                                    let model = MissedModel(userid: userID, name: username, photo: picture)
-                                    missed.append(model)
-
+                                    let model = SocialModel(userid: userID, name: username, photo: picture)
+                                    social.append(model)
+                                    
                                     
                                 }
                             }
                         }
-                     
-                        NSNotificationCenter.defaultCenter().postNotificationName("missedNotification", object: nil, userInfo: ["data":missed])
+                        
+                        NSNotificationCenter.defaultCenter().postNotificationName("socialNotification", object: nil, userInfo: ["data":social])
                         
                     }
                     
@@ -79,7 +79,8 @@ class MissedHelper{
     }
     
     
-    func fetchUserMissedInfo(userid:String)
+    
+    func fetchUserSocialInfo(userid:String)
     {
         
         let urlPath = "http://89.432.3.97:8000/user/app-registration/?access_token=\(userid)"
@@ -109,23 +110,23 @@ class MissedHelper{
                     
                     
                     if let json = jsonResult[0] as? Dictionary<String, AnyObject> {
-                                if let fb: AnyObject = json["facebook"] {
-                                    if let insta: AnyObject = json["instagram"] {
-                                        if let link: AnyObject = json["linkedin"] {
-                                            if let snap: AnyObject = json["snapchat"] {
-
-                                                let facebook: String = fb as! String
-                                                let instagram: String = insta as! String
-                                                let linkedin: String = link as! String
-                                                let snapchat: String = snap as! String
-                                    
-                                        let model = MissedInfoModel(facebook: facebook, instagram: instagram, linkedin: linkedin, snapchat: snapchat)
-                                    
+                        if let fb: AnyObject = json["facebook"] {
+                            if let insta: AnyObject = json["instagram"] {
+                                if let link: AnyObject = json["linkedin"] {
+                                    if let snap: AnyObject = json["snapchat"] {
+                                        
+                                        let facebook: String = fb as! String
+                                        let instagram: String = insta as! String
+                                        let linkedin: String = link as! String
+                                        let snapchat: String = snap as! String
+                                        
+                                        let model = SocialInfoModel(facebook: facebook, instagram: instagram, linkedin: linkedin, snapchat: snapchat)
+                                        
                                     }
                                 }
                             }
                         }
-          //              NSNotificationCenter.defaultCenter().postNotificationName("missedUserNotification", object: nil, userInfo: model)
+                                      NSNotificationCenter.defaultCenter().postNotificationName("socialUserNotification", object: nil, userInfo: model)
                         
                     }
                     
@@ -141,4 +142,12 @@ class MissedHelper{
         
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
 }

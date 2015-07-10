@@ -37,6 +37,7 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
         
     }
     
+    
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
         println("User Logged In")
         println("This is where you perform a segue.")

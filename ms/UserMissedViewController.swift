@@ -14,7 +14,13 @@ class UserMissedViewController: UIViewController {
     
     var missedModel:MissedModel = MissedModel(userid: "", name: "", photo: "")
     
-    var missedInfoModel:MissedInfoModel = MissedInfoModel(userid: "", name: "", photo: "", facebook: "", instagram: "", linkedin: "", snapchat: "")
+    var missedInfoModel:MissedInfoModel = MissedInfoModel(facebook: "", instagram: "", linkedin: "", snapchat: "")
+
+
+    
+    var social_image = [UIImage]()
+    var social_text = [String]()
+    var sources = [String]()
 
 
     override func viewDidLoad() {
@@ -41,16 +47,46 @@ class UserMissedViewController: UIViewController {
 /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        println("hello")
-        performSegueWithIdentifier("WebSegue", sender: self)
+
+    
         
     }
     
     func userInfoExecuted(notification:NSNotification){
-    let photos:[UIImage]? = notification.userInfo?["photos"] as? [UIImage]
-    self.sources = photos!
-    self.collectionView!.reloadData()
+        let userData = notification.object as! MissedInfoModel
+
+    
+        if(userdata.facebook != "")
+        {
+            self.sources.append(userdata.facebook)
+            self.social_image.append(UIImage(named: "Facebook-icon"))
+            self.social_text.append("Facebook")
+        }
+    
+        if(userData.instagram != "")
+        {
+            self.sources.append(userData.instagram)
+            self.social_image.append(UIImage(named: "Instagram-icon"))
+            self.social_text.append("Instagram")
+        }
+    
+        if(userData.linkedin != "")
+        {
+            self.sources.append(userData.linkedin)
+            self.social_image.append(UIImage(named: "Linkedin-icon"))
+            self.social_text.append("Linkedin")
+        }
+    
+        if(userdata.snapchat != "")
+        {
+            self.sources.append(userdata.snapchat)
+            self.social_image.append(UIImage(named: "Snapchat-icon"))
+            self.social_text.append("Snapchat")
+        }
+        self.tableView!.reloadData()
     }
+    
+
     
     
     
@@ -62,12 +98,16 @@ class UserMissedViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.social_image.count ?? 0
+        return self.sources.count ?? 0
         
     }
     
+    ["fb_url", "", "linkedin_url", ""]
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("missedusersocialCell") as! UserMissedTableViewCell
+    
+
         cell.socialImageView.image = self.social_image[indexPath.row]
         cell.socialTextView.text = self.social_text[indexPath.row]
         return cell
@@ -82,14 +122,5 @@ class UserMissedViewController: UIViewController {
     }
     
 */
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

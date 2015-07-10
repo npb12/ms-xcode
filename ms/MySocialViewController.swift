@@ -32,6 +32,9 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     var link_bool = false
     var snap_bool = false
     
+    let fbtextView = FBtextView()
+
+    
     /*
       logic -- 
           if server recieves "" text didn't change
@@ -43,7 +46,6 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var Snapchattextfield: UITextField!
     
-    @IBOutlet weak var FBtextview: UITextView!
     
     @IBOutlet weak var Instagramtextfield: UITextField!
 
@@ -56,7 +58,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var picView: UIView!
     
     override func viewDidLoad() {
-        
+
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -66,9 +68,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         picture0.setBackgroundImage(image0, forState: .Normal)
 
         
-        
-        FBtextview.text = String(self.user.getName())
-        
+                
         
         self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -80,10 +80,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         snap.setBox()
         link.setBox()
         
-        
-        
-        
-        
+    
 
       Instagramtextfield.delegate = self
         Linkedintextfield.delegate = self
@@ -117,18 +114,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-/*    func setText()
-    {
-        
-        FBtextview.textColor = UIColor.lightGrayColor()
-    }
-    
-    func resetText()
-    {
-        
-        FBtextview.textColor = UIColor.blackColor()
-    }
-    */
+
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         

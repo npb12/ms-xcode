@@ -1,15 +1,16 @@
 //
-//  MissedInfoModel.swift
+//  SocialInfoModel.swift
 //  ms
 //
-//  Created by Neil Ballard on 7/2/15.
+//  Created by Neil Ballard on 7/9/15.
 //  Copyright (c) 2015 Missed Social. All rights reserved.
 //
 
 import Foundation
 
 
-class MissedInfoModel{
+class SocialInfoModel{
+    
     
     var facebook = ""
     var instagram = ""
@@ -26,8 +27,5 @@ class MissedInfoModel{
         
     }
     
-    
-    
-    
-    
+
 }

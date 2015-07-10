@@ -11,15 +11,18 @@ import Foundation
 
 class SocialModel{
     
+    var userid = ""
     var name = ""
     var photo = ""
     var date = ""
     
     
-    init(name:String, photo:String, date:String){
+    init(userid:String, name:String, photo:String){
+        
+        self.userid = userid
         self.name = name
         self.photo = photo
-        self.date = date
+//        self.date = date
     }
     
     
