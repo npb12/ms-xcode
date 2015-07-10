@@ -795,14 +795,45 @@
                                                 <constraint firstAttribute="height" constant="115" id="6xI-7F-NJZ"/>
                                                 <constraint firstAttribute="width" constant="123" id="gjA-vb-0EZ"/>
                                             </constraints>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="6xI-7F-NJZ"/>
+                                                    <exclude reference="gjA-vb-0EZ"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="gvN-Jn-6Ub" firstAttribute="leading" secondItem="zyc-RI-JpC" secondAttribute="leading" constant="1" id="FTm-pi-VrB"/>
+                                    <constraint firstItem="gvN-Jn-6Ub" firstAttribute="top" secondItem="zyc-RI-JpC" secondAttribute="top" constant="1" id="HkI-gA-Apu"/>
                                     <constraint firstItem="gvN-Jn-6Ub" firstAttribute="leading" secondItem="zyc-RI-JpC" secondAttribute="leading" id="M2a-bg-Wpn"/>
+                                    <constraint firstAttribute="bottom" secondItem="gvN-Jn-6Ub" secondAttribute="bottom" constant="1" id="Tlu-pY-mWI"/>
+                                    <constraint firstAttribute="trailing" secondItem="gvN-Jn-6Ub" secondAttribute="trailing" constant="1" id="WoL-6A-bUb"/>
                                     <constraint firstItem="gvN-Jn-6Ub" firstAttribute="top" secondItem="zyc-RI-JpC" secondAttribute="top" id="g1y-Fo-cTb"/>
+                                    <constraint firstAttribute="bottom" secondItem="gvN-Jn-6Ub" secondAttribute="bottom" constant="1" id="mWu-dp-n83"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FTm-pi-VrB"/>
+                                        <exclude reference="HkI-gA-Apu"/>
+                                        <exclude reference="Tlu-pY-mWI"/>
+                                        <exclude reference="WoL-6A-bUb"/>
+                                        <exclude reference="mWu-dp-n83"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FTm-pi-VrB"/>
+                                        <include reference="HkI-gA-Apu"/>
+                                        <exclude reference="M2a-bg-Wpn"/>
+                                        <include reference="Tlu-pY-mWI"/>
+                                        <include reference="WoL-6A-bUb"/>
+                                        <exclude reference="g1y-Fo-cTb"/>
+                                        <exclude reference="mWu-dp-n83"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="photoimageView" destination="gvN-Jn-6Ub" id="fFz-yI-Tk2"/>
                                 </connections>

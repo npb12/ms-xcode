@@ -144,8 +144,8 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        var totalHeight: CGFloat = (self.view.frame.width / 3)
-        var totalWidth: CGFloat = (self.view.frame.width / 3)
+        var totalHeight: CGFloat = (self.view.frame.width / 3.00)
+        var totalWidth: CGFloat = (self.view.frame.width / 3.00)
         
         return CGSizeMake(totalWidth, totalHeight)
     }
