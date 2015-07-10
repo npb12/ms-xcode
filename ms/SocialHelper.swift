@@ -126,7 +126,7 @@ class SocialHelper{
                                 }
                             }
                         }
-                                      NSNotificationCenter.defaultCenter().postNotificationName("socialUserNotification", object: nil, userInfo: model)
+               //                       NSNotificationCenter.defaultCenter().postNotificationName("socialUserNotification", object: nil, userInfo: model)
                         
                     }
                     

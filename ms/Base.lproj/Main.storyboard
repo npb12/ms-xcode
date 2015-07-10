@@ -941,7 +941,7 @@
                         <constraints>
                             <constraint firstItem="qH2-O0-52k" firstAttribute="leading" secondItem="34r-eZ-bjl" secondAttribute="leading" id="EHX-7i-9uz"/>
                             <constraint firstAttribute="bottom" secondItem="qH2-O0-52k" secondAttribute="bottom" id="JwA-fT-6Ox"/>
-                            <constraint firstItem="qH2-O0-52k" firstAttribute="top" secondItem="34r-eZ-bjl" secondAttribute="top" id="Xch-jY-L4X"/>
+                            <constraint firstItem="qH2-O0-52k" firstAttribute="top" secondItem="34r-eZ-bjl" secondAttribute="top" constant="60" id="Xch-jY-L4X"/>
                             <constraint firstAttribute="trailing" secondItem="qH2-O0-52k" secondAttribute="trailing" id="ufL-kr-mvc"/>
                         </constraints>
                         <variation key="default">
@@ -968,7 +968,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTo-n6-RSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="Encounters" id="Wrk-Bn-PRu"/>
             </objects>
             <point key="canvasLocation" x="3141" y="1904.25"/>
         </scene>
