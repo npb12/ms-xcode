@@ -9,6 +9,14 @@
 import UIKit
 
 class UserMissedTableViewCell: UITableViewCell {
+  
+    
+    
+    //make outlets
+    
+ //   @IBOutlet var socialImageView:UIImageView!
+ //   @IBOutlet var socialTextView:UITextView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
