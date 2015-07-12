@@ -78,10 +78,17 @@ class AlbumsViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "photoSegue"){
-            let destinitionController = segue.destinationViewController as? AlbumViewController
-            destinitionController!.albumModel = self.currentAlbumModel
-            self.destController = destinitionController
+         
+            let navVC = segue.destinationViewController as! UINavigationController
+
+            
+            let collectionVC = navVC.viewControllers.first as? AlbumViewController
+            
+            collectionVC?.albumModel = self.currentAlbumModel
+            
+            self.destController = collectionVC
         }
+
         println("trying to prepare")
     }
 
@@ -92,6 +99,7 @@ class AlbumsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     
     override func viewDidLoad() {
+        
         
          NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("executeHandle:"), name: "PostData", object: nil)
         
@@ -107,6 +115,12 @@ class AlbumsViewController: UIViewController,UITableViewDataSource,UITableViewDe
         // Do any additional setup after loading the view, typically from a nib.
 
     }
+    
+    @IBAction func goBack(segue:UIStoryboardSegue) {
+        
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

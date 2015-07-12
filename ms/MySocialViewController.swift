@@ -206,6 +206,16 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
 
     }
     
+    @IBAction func goBackMysocial(segue:UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func saveImageMysocial(segue:UIStoryboardSegue) {
+        let image0:UIImage = user.getImage0()
+        
+        picture0.setBackgroundImage(image0, forState: .Normal)
+    }
+    
     /*
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {

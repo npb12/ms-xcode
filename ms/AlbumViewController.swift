@@ -18,10 +18,12 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
     var sources = [UIImage]()
     var photo:UIImage?
             
+    @IBOutlet weak var myBarButtonItem: UIBarButtonItem!
     let user = User()
     let user_server = UserServer()
     
     var singlePhotoViewController:SinglePhotoViewController?
+
     
     func photoExecuted(notification:NSNotification){
         let photos:[UIImage]? = notification.userInfo?["photos"] as? [UIImage]
@@ -43,20 +45,31 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
        // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
+  //      var barBack = UIBarButtonItem(title: "Reset", style: UIBarButtonItemStyle.Plain, target: self, action: "reset:")
+ //       self.navigationItem.leftBarButtonItem = barBack
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("photoExecuted:"), name: "photoNotification", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("coverPhotoExecuted:"), name: "coverPhotoNotification", object: nil)
         
-        self.navigationItem.title = self.albumModel.name
+      //  self.navigationItem.title = self.albumModel.name
 
         // Do any additional setup after loading the view.
+        
+        myBarButtonItem.enabled = false
+        myBarButtonItem.title = ""
+        
+        
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -68,13 +81,16 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "photoNotification", object: nil);
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if(segue.identifier == "ShowEachSegue"){
-            self.singlePhotoViewController = segue.destinationViewController as? SinglePhotoViewController
-            
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "OkOk" {
+            // println(self.photo!)
+             user.setImage(photo!)
+            user_server.sendImage(photo!)
         }
-        
     }
+    
+    
 
 
     // MARK: UICollectionViewDataSource
@@ -118,12 +134,15 @@ class AlbumViewController: UICollectionViewController, UICollectionViewDataSourc
     
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        let photo = self.sources[indexPath.row] as UIImage
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AlbumViewControllerCell
+        self.photo = self.sources[indexPath.row] as UIImage!
+
+        myBarButtonItem.enabled = true
+        myBarButtonItem.title = "Ok"
         
-        user.setImage(photo)
-        user_server.sendImage(photo)
-        println(photo)
-        singlePhotoViewController?.photo = photo
+//        cell.layer.borderWidth = 3.0
+ //       cell.layer.borderColor = UIColor.blueColor().CGColor
+
         return true
     }
     

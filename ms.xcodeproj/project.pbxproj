@@ -34,9 +34,9 @@
 		4ABF739E1B463BB1006CCD92 /* MissedInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF739D1B463BB1006CCD92 /* MissedInfoModel.swift */; };
 		4ABF73A01B471921006CCD92 /* UserMissedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF739F1B471921006CCD92 /* UserMissedTableViewCell.swift */; };
 		4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC267E41A6E3CDB00AA6478 /* Location.m */; };
+		4AC3BB2B1B51D1B900EA6ED3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC3BB2A1B51D1B900EA6ED3 /* Images.xcassets */; };
 		4AC597A11A85D7E600A60F2A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */; };
 		4AC597A31A8B4CCF00A60F2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */; };
-		4AC7CFEE1B0B20EA001D48B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7CFED1B0B20EA001D48B4 /* Images.xcassets */; };
 		4AC7CFF01B0DBE53001D48B4 /* FacebookBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7CFEF1B0DBE53001D48B4 /* FacebookBox.swift */; };
 		4AC7CFF41B0E92B2001D48B4 /* InstagramBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7CFF31B0E92B2001D48B4 /* InstagramBox.swift */; };
 		4AC7CFF61B0E92EB001D48B4 /* SnapchatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7CFF51B0E92EB001D48B4 /* SnapchatBox.swift */; };
@@ -99,9 +99,9 @@
 		4AC267D71A6E1F5C00AA6478 /* ms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ms-Bridging-Header.h"; sourceTree = "<group>"; };
 		4AC267E41A6E3CDB00AA6478 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = SOURCE_ROOT; };
 		4AC267E61A6E3CEE00AA6478 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = SOURCE_ROOT; };
+		4AC3BB2A1B51D1B900EA6ED3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		4AC7CFED1B0B20EA001D48B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../.Trash/Images.xcassets; sourceTree = "<group>"; };
 		4AC7CFEF1B0DBE53001D48B4 /* FacebookBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookBox.swift; sourceTree = "<group>"; };
 		4AC7CFF31B0E92B2001D48B4 /* InstagramBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramBox.swift; sourceTree = "<group>"; };
 		4AC7CFF51B0E92EB001D48B4 /* SnapchatBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapchatBox.swift; sourceTree = "<group>"; };
@@ -240,6 +240,7 @@
 		CFE490761A545A0800D66D5A /* ms */ = {
 			isa = PBXGroup;
 			children = (
+				4AC3BB2A1B51D1B900EA6ED3 /* Images.xcassets */,
 				4A817CF41B33A3F1007C8AA4 /* Profile */,
 				4A817CEF1B328030007C8AA4 /* Social */,
 				4A2E46311B256FE6007C02E4 /* Missed */,
@@ -257,7 +258,6 @@
 				4AC7CFFC1B0EB055001D48B4 /* Storyboard.storyboard */,
 				CFE490851A545A0800D66D5A /* LaunchScreen.xib */,
 				CFE4907B1A545A0800D66D5A /* ms.xcdatamodeld */,
-				4AC7CFED1B0B20EA001D48B4 /* Images.xcassets */,
 				4A2E462F1B1D7F8E007C02E4 /* images */,
 				CFE490771A545A0800D66D5A /* Supporting Files */,
 			);
@@ -376,9 +376,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2E46301B1D7F8E007C02E4 /* images in Resources */,
+				4AC3BB2B1B51D1B900EA6ED3 /* Images.xcassets in Resources */,
 				4AC7CFFB1B0EADE0001D48B4 /* Main.storyboard in Resources */,
 				4AC7CFFE1B0EB055001D48B4 /* Storyboard.storyboard in Resources */,
-				4AC7CFEE1B0B20EA001D48B4 /* Images.xcassets in Resources */,
 				CFE490871A545A0800D66D5A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

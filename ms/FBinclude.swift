@@ -11,9 +11,9 @@ import Foundation
 
 class FBinclude: UIButton {
 
-    let fbcheckbox = UIImage(named: "checkbox") as UIImage?
+    let fbcheckbox = UIImage(named: "checkmark") as UIImage?
     
-    let fbcheckedbox = UIImage(named: "checkedbox") as UIImage?
+    let fbcheckedbox = UIImage(named: "uncheckmark") as UIImage?
     
     let fbtextView = FBtextView()
     
