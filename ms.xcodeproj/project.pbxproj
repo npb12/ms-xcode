@@ -12,7 +12,6 @@
 		4A2B92591B10125200583088 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B92581B10125200583088 /* User.swift */; };
 		4A2E46301B1D7F8E007C02E4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4A2E462F1B1D7F8E007C02E4 /* images */; };
 		4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E46341B257148007C02E4 /* MissedViewController.swift */; };
-		4A5722521B4E44580057572C /* FBinclude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722511B4E44570057572C /* FBinclude.swift */; };
 		4A5722541B4E4A360057572C /* FBtextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722531B4E4A360057572C /* FBtextView.swift */; };
 		4A5722561B4F5A520057572C /* SocialHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722551B4F5A520057572C /* SocialHelper.swift */; };
 		4A57225A1B4F72980057572C /* UserSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5722591B4F72980057572C /* UserSocialViewController.swift */; };
@@ -35,6 +34,12 @@
 		4ABF73A01B471921006CCD92 /* UserMissedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF739F1B471921006CCD92 /* UserMissedTableViewCell.swift */; };
 		4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC267E41A6E3CDB00AA6478 /* Location.m */; };
 		4AC3BB2B1B51D1B900EA6ED3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC3BB2A1B51D1B900EA6ED3 /* Images.xcassets */; };
+		4AC3BB2D1B52452900EA6ED3 /* MissedSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB2C1B52452900EA6ED3 /* MissedSettingsViewController.swift */; };
+		4AC3BB2F1B52455300EA6ED3 /* MissedSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB2E1B52455300EA6ED3 /* MissedSettingsTableViewCell.swift */; };
+		4AC3BB311B52464300EA6ED3 /* MissedSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB301B52464300EA6ED3 /* MissedSettingsModel.swift */; };
+		4AC3BB371B54A99000EA6ED3 /* includeFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB361B54A99000EA6ED3 /* includeFB.swift */; };
+		4AC3BB391B54AF9D00EA6ED3 /* addConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB381B54AF9D00EA6ED3 /* addConnection.swift */; };
+		4AC3BB3B1B54B3DA00EA6ED3 /* ConnectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3BB3A1B54B3DA00EA6ED3 /* ConnectionButton.swift */; };
 		4AC597A11A85D7E600A60F2A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */; };
 		4AC597A31A8B4CCF00A60F2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */; };
 		4AC7CFF01B0DBE53001D48B4 /* FacebookBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC7CFEF1B0DBE53001D48B4 /* FacebookBox.swift */; };
@@ -75,7 +80,6 @@
 		4A2B92581B10125200583088 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A2E462F1B1D7F8E007C02E4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		4A2E46341B257148007C02E4 /* MissedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedViewController.swift; sourceTree = "<group>"; };
-		4A5722511B4E44570057572C /* FBinclude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBinclude.swift; sourceTree = "<group>"; };
 		4A5722531B4E4A360057572C /* FBtextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBtextView.swift; sourceTree = "<group>"; };
 		4A5722551B4F5A520057572C /* SocialHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialHelper.swift; sourceTree = "<group>"; };
 		4A5722591B4F72980057572C /* UserSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSocialViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,12 @@
 		4AC267E41A6E3CDB00AA6478 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = SOURCE_ROOT; };
 		4AC267E61A6E3CEE00AA6478 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = SOURCE_ROOT; };
 		4AC3BB2A1B51D1B900EA6ED3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4AC3BB2C1B52452900EA6ED3 /* MissedSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedSettingsViewController.swift; sourceTree = "<group>"; };
+		4AC3BB2E1B52455300EA6ED3 /* MissedSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4AC3BB301B52464300EA6ED3 /* MissedSettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedSettingsModel.swift; sourceTree = "<group>"; };
+		4AC3BB361B54A99000EA6ED3 /* includeFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = includeFB.swift; sourceTree = "<group>"; };
+		4AC3BB381B54AF9D00EA6ED3 /* addConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addConnection.swift; sourceTree = "<group>"; };
+		4AC3BB3A1B54B3DA00EA6ED3 /* ConnectionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionButton.swift; sourceTree = "<group>"; };
 		4AC597A01A85D7E600A60F2A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		4AC597A21A8B4CCF00A60F2A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4AC7CFEF1B0DBE53001D48B4 /* FacebookBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookBox.swift; sourceTree = "<group>"; };
@@ -158,6 +168,11 @@
 				4ABF739D1B463BB1006CCD92 /* MissedInfoModel.swift */,
 				4ABF73991B45F5FC006CCD92 /* UserMissedViewController.swift */,
 				4ABF739F1B471921006CCD92 /* UserMissedTableViewCell.swift */,
+				4AC3BB2C1B52452900EA6ED3 /* MissedSettingsViewController.swift */,
+				4AC3BB2E1B52455300EA6ED3 /* MissedSettingsTableViewCell.swift */,
+				4AC3BB301B52464300EA6ED3 /* MissedSettingsModel.swift */,
+				4AC3BB381B54AF9D00EA6ED3 /* addConnection.swift */,
+				4AC3BB3A1B54B3DA00EA6ED3 /* ConnectionButton.swift */,
 			);
 			name = Missed;
 			sourceTree = "<group>";
@@ -212,8 +227,8 @@
 				4AEFB2C81B159E5F008FC58A /* SinglePhotoViewController.swift */,
 				4ACA03301B37C92100CB31C1 /* AlbumViewController.swift */,
 				4A8C2E111B37EC05003027ED /* AlbumViewControllerCell.swift */,
-				4A5722511B4E44570057572C /* FBinclude.swift */,
 				4A5722531B4E4A360057572C /* FBtextView.swift */,
+				4AC3BB361B54A99000EA6ED3 /* includeFB.swift */,
 			);
 			name = MySocial;
 			sourceTree = "<group>";
@@ -397,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC3BB371B54A99000EA6ED3 /* includeFB.swift in Sources */,
 				4ACC0DC91A744A6200CF74C4 /* CoreDataToServer.swift in Sources */,
 				CFE4907A1A545A0800D66D5A /* AppDelegate.swift in Sources */,
 				4AC7CFF41B0E92B2001D48B4 /* InstagramBox.swift in Sources */,
@@ -413,13 +429,13 @@
 				4A2E46351B257148007C02E4 /* MissedViewController.swift in Sources */,
 				4AC267E51A6E3CDB00AA6478 /* Location.m in Sources */,
 				4AEFB2BD1B119348008FC58A /* AlbumModel.swift in Sources */,
-				4A5722521B4E44580057572C /* FBinclude.swift in Sources */,
 				4A2886351B2F8A0900919FB7 /* MissedTableViewCell.swift in Sources */,
 				4AEFB2BB1B1192BA008FC58A /* UserPhotos.swift in Sources */,
 				4A817CFA1B33F86D007C8AA4 /* SocialWebViewController.swift in Sources */,
 				4A2886371B2FC9CE00919FB7 /* GetMissed.swift in Sources */,
 				4A817CF11B328209007C8AA4 /* SocialViewController.swift in Sources */,
 				4A817CF61B33A450007C8AA4 /* UserProfileViewController.swift in Sources */,
+				4AC3BB2F1B52455300EA6ED3 /* MissedSettingsTableViewCell.swift in Sources */,
 				4AEFB2C91B159E5F008FC58A /* SinglePhotoViewController.swift in Sources */,
 				4A5E96E71B42507B00DEFDB8 /* UserServer.swift in Sources */,
 				4AEFB2BF1B11945B008FC58A /* FBphotohelper.swift in Sources */,
@@ -427,9 +443,12 @@
 				4ACA03311B37C92400CB31C1 /* AlbumViewController.swift in Sources */,
 				4ABB9EF21AA2F39A00A72F08 /* MySocialViewController.swift in Sources */,
 				4A5E96E91B4252F100DEFDB8 /* SocialModel.swift in Sources */,
+				4AC3BB2D1B52452900EA6ED3 /* MissedSettingsViewController.swift in Sources */,
 				4A57225A1B4F72980057572C /* UserSocialViewController.swift in Sources */,
 				4AEFB2C11B119703008FC58A /* AlbumsViewController.swift in Sources */,
 				4A5E96ED1B4258F300DEFDB8 /* UserProfileModel.swift in Sources */,
+				4AC3BB391B54AF9D00EA6ED3 /* addConnection.swift in Sources */,
+				4AC3BB311B52464300EA6ED3 /* MissedSettingsModel.swift in Sources */,
 				4AC7CFF61B0E92EB001D48B4 /* SnapchatBox.swift in Sources */,
 				4A5722561B4F5A520057572C /* SocialHelper.swift in Sources */,
 				4ACC0DCB1A760B8900CF74C4 /* ServerManagement.swift in Sources */,
@@ -438,6 +457,7 @@
 				4ACA934D1A95A46600808F3F /* LandingViewController.swift in Sources */,
 				4A5E96EB1B4256B200DEFDB8 /* MissedModel.swift in Sources */,
 				4A57225C1B4F730B0057572C /* UserSocialTableViewCell.swift in Sources */,
+				4AC3BB3B1B54B3DA00EA6ED3 /* ConnectionButton.swift in Sources */,
 				4ACC0DC71A70CA8D00CF74C4 /* CoreDataManagement.swift in Sources */,
 				4ABF739E1B463BB1006CCD92 /* MissedInfoModel.swift in Sources */,
 			);

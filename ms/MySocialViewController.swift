@@ -13,11 +13,10 @@ import UIKit
 
 
 
-class MySocialViewController: UIViewController, UITextFieldDelegate{
+class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     let user = User()
     let user_server = UserServer()
     let albumviewcontroller = AlbumViewController()
- //   let fbsettings = FBsettings()
     let fb = FacebookBox()
     let insta = InstagramBox()
     let snap = SnapchatBox()
@@ -32,8 +31,6 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     var link_bool = false
     var snap_bool = false
     
-    let fbtextView = FBtextView()
-
     
     /*
       logic -- 
@@ -43,6 +40,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     
     */
 
+    @IBOutlet weak var fbtextview: FBtextView!
 
     @IBOutlet weak var Snapchattextfield: UITextField!
     
@@ -56,6 +54,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var picView: UIView!
+    
+    
     
     override func viewDidLoad() {
 
@@ -73,15 +73,13 @@ class MySocialViewController: UIViewController, UITextFieldDelegate{
         self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
-        
-//        fbsettings.settings()
-        fb.setBox()
+                fb.setBox()
         insta.setBox()
         snap.setBox()
         link.setBox()
         
     
-
+      fbtextview.delegate = self
       Instagramtextfield.delegate = self
         Linkedintextfield.delegate = self
         Snapchattextfield.delegate = self

@@ -32,8 +32,9 @@ class FacebookBox: UIButton {
 
     
     
-    var isChecked:Bool = false{
+    var isChecked:Bool = true{
         didSet{
+            println("is checked")
             if isChecked == true {
                 self.setImage(checkedbox, forState: .Normal)
             }else{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FBtextView: UITextView {
+class FBtextView: UITextView, UITextViewDelegate{
 
     
     let user = User()
@@ -27,7 +27,9 @@ class FBtextView: UITextView {
     
     func set_text_grey()
     {
-        self.textColor = UIColor.lightGrayColor()
+        self.textColor = UIColor.blueColor()
+        println("grey")
+        
     }
     
     
@@ -35,7 +37,7 @@ class FBtextView: UITextView {
     func set_text_black()
         
     {
-        
+        println("black")
         self.textColor = UIColor.blackColor()
     }
     

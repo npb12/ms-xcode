@@ -17,6 +17,7 @@ class User{
     var linkedin_url: String?
     var snapchat_name: String?
     var images = [UIImage]()
+    var fbSettings: String?
     
     
 
@@ -111,8 +112,6 @@ class User{
         
         if defaults.stringForKey("snapchat") == nil {
             
-            println("hello")
-
             
             self.snapchat_name = "SNAPCHAT NAME"
             
@@ -122,6 +121,28 @@ class User{
         }
         
         return self.snapchat_name!
+        
+        
+    }
+    
+    func getFBSettings()-> String
+    {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.stringForKey("FacebookSettings") == "unchecked" {
+            
+            
+            self.fbSettings = "unchecked"
+            println("not checked")
+            
+        }else{
+            
+            self.fbSettings = defaults.stringForKey("FacebookSettings")
+            println("checccckkkkeeeeddd")
+        }
+        
+        return self.fbSettings!
         
         
     }

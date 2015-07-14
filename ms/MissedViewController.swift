@@ -20,10 +20,11 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     /*
      * new server code (below)
     */
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView?
     //var destController:UserMissedViewController!
     
     let missedhelper = MissedHelper()
+    let missedCell = MissedTableViewCell()
 
 
     var sources:  [MissedModel] = []
@@ -76,6 +77,8 @@ class MissedViewController: UIViewController, UITableViewDataSource{
                 
    //     let user_id = user.getUserID()
         
+
+        
         //    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("executeMissedHandle:"), name: "PostInfo", object: nil)
         
         
@@ -105,6 +108,10 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     }
 */
    
+    
+    @IBAction func goBackMissedView(segue:UIStoryboardSegue) {
+        
+    }
 
 
     override func didReceiveMemoryWarning() {
@@ -120,6 +127,9 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("missedCell") as! MissedTableViewCell
         cell.missedImageView.image = self.results[indexPath.row]
+      //  cell.applyPlainShadow(missedCell.outer_layer!)
+      //  cell.applyCurvedShadow(missedCell.outer_layer!)
+      //  cell.applyHoverShadow(missedCell.outer_layer!)
         return cell
     }
 
