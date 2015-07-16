@@ -17,6 +17,7 @@ class MissedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var edit_button: UIButton!
     
+    @IBOutlet weak var pic_layer: UIView!
     
     var missed:AnyObject?{
         didSet{
@@ -33,17 +34,18 @@ class MissedTableViewCell: UITableViewCell {
     
     }
     
-    func applyPlainShadow(view: UIView) {
-        var layer = view.layer
+    func applyPlainShadow() {
+        var layer = outer_layer.layer
         
         layer.shadowColor = UIColor.blackColor().CGColor
-        layer.shadowOffset = CGSize(width: 0, height: 10)
-        layer.shadowOpacity = 0.4
-        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 2
     }
     
-    func applyCurvedShadow(view: UIView) {
-        let size = view.bounds.size
+    /*
+    func applyCurvedShadow() {
+        let size = outer_layer.bounds.size
         let width = size.width
         let height = size.height
         let depth = CGFloat(11.0)
@@ -67,7 +69,7 @@ class MissedTableViewCell: UITableViewCell {
             controlPoint1: CGPoint(x: width - curvyness, y: height + lessDepth - curvyness),
             controlPoint2: CGPoint(x: curvyness, y: height + lessDepth - curvyness))
         
-        var layer = view.layer
+        var layer = outer_layer.layer
         layer.shadowPath = path.CGPath
         layer.shadowColor = UIColor.blackColor().CGColor
         layer.shadowOpacity = 0.3
@@ -77,20 +79,20 @@ class MissedTableViewCell: UITableViewCell {
     
     
 
-    func applyHoverShadow(view: UIView) {
-        let size = view.bounds.size
+    func applyHoverShadow() {
+        let size = outer_layer.bounds.size
         let width = size.width
         let height = size.height
         
         var ovalRect = CGRect(x: 5, y: height + 5, width: width - 10, height: 15)
         var path = UIBezierPath(roundedRect: ovalRect, cornerRadius: 10)
         
-        var layer = view.layer
+        var layer = outer_layer.layer
         layer.shadowPath = path.CGPath
         layer.shadowColor = UIColor.blackColor().CGColor
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 5
         layer.shadowOffset = CGSize(width: 0, height: 0)
-    }
+    }*/
    
 }

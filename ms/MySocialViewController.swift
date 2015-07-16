@@ -32,6 +32,14 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     var snap_bool = false
     
     
+    @IBOutlet weak var fb_icon: UIImageView!
+    
+    @IBOutlet weak var insta_icon: UIImageView!
+    
+    @IBOutlet weak var link_icon: UIImageView!
+    
+    
+    @IBOutlet weak var snap_icon: UIImageView!
     /*
       logic -- 
           if server recieves "" text didn't change
@@ -55,8 +63,12 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var picView: UIView!
     
+    @IBOutlet weak var line1: UIView!
+    @IBOutlet weak var line2: UIView!
     
+    @IBOutlet weak var line3: UIView!
     
+    @IBOutlet weak var line4: UIView!
     override func viewDidLoad() {
 
         
@@ -68,7 +80,15 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
         picture0.setBackgroundImage(image0, forState: .Normal)
 
         
-                
+        self.applyPlainShadow3(fb_icon)
+        self.applyPlainShadow3(insta_icon)
+        self.applyPlainShadow3(link_icon)
+        self.applyPlainShadow3(snap_icon)
+        self.applyPlainShadow2(picView)
+        self.applyPlainShadow(line1)
+        self.applyPlainShadow(line2)
+        self.applyPlainShadow(line3)
+        self.applyPlainShadow(line4)
         
         self.picture0.addTarget(self, action: "picture0Tapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -85,19 +105,19 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
         Snapchattextfield.delegate = self
         
         
-        if (user.getInstagramName() != "") {
+        if (user.getInstagramName() != "" && user.getInstagramName() != "INSTAGRAM NAME") {
             Instagramtextfield.text = user.getInstagramName()
             insta_bool = true
             println("true")
         }
         
-        if (user.getLinkedinName() != "") {
+        if (user.getLinkedinName() != "" && user.getLinkedinName() != "LINKEDIN NAME") {
             Linkedintextfield.text = user.getLinkedinName()
             link_bool = true
             println("true")
         }
         
-        if (user.getSnapchatName() != "") {
+        if (user.getSnapchatName() != "" && user.getSnapchatName() != "SNAPCHAT NAME") {
             Snapchattextfield.text = user.getSnapchatName()
             snap_bool = true
             println("true")
@@ -272,6 +292,42 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     */
     
     
+    func applyPlainShadow(view: UIView) {
+        var layer = view.layer
+        
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 0.5)
+        layer.shadowOpacity = 0.05
+        layer.shadowRadius = 0.05
+    }
+    
+    
+    func applyPlainShadow2(view: UIView) {
+        var layer = view.layer
+        
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 0.75)
+        layer.shadowOpacity = 0.075
+        layer.shadowRadius = 0.75
+    }
+    
+    func applyPlainShadow3(view: UIImageView) {
+        var layer = view.layer
+        
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 2
+    }
+    
+    func applyPlainShadow4(view: UITextView) {
+        var layer = view.layer
+        
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 2
+    }
     
     
     

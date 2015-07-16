@@ -20,6 +20,13 @@ class HomeViewController: UITabBarController {
     //    self.dismissViewControllerAnimated(flag: YES, completion: nil)
 
         super.viewDidLoad()
+        
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = false
     }
 
     

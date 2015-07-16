@@ -134,12 +134,10 @@ class User{
             
             
             self.fbSettings = "unchecked"
-            println("not checked")
             
         }else{
             
             self.fbSettings = defaults.stringForKey("FacebookSettings")
-            println("checccckkkkeeeeddd")
         }
         
         return self.fbSettings!
@@ -163,9 +161,7 @@ class User{
         
             if !imageData.writeToFile(imagePath, atomically: false)
             {
-                println("not saved")
             }   else {
-                println("saved")
                 NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
                 NSUserDefaults.standardUserDefaults().synchronize()
 

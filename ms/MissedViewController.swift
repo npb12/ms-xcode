@@ -15,6 +15,7 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     
     let user = User()
 
+    var refreshControl:UIRefreshControl!
 
     
     /*
@@ -41,10 +42,7 @@ class MissedViewController: UIViewController, UITableViewDataSource{
       }
     }
     
-    func selectRowAtIndexPath(indexPath: NSIndexPath!, animated: Bool, scrollPosition: UITableViewScrollPosition){
-      println("selectrowatindexpath")
-    
-    }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
     
@@ -76,8 +74,12 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
                 
    //     let user_id = user.getUserID()
-        
 
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView!.addSubview(refreshControl)
+        
         
         //    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("executeMissedHandle:"), name: "PostInfo", object: nil)
         
@@ -90,7 +92,20 @@ class MissedViewController: UIViewController, UITableViewDataSource{
         
         super.viewDidLoad()
         
+
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func configureTableView() {
+        tableView!.rowHeight = UITableViewAutomaticDimension
+        tableView!.estimatedRowHeight = 160.0
+    }
+    
+    func selectRowAtIndexPath(indexPath: NSIndexPath!, animated: Bool, scrollPosition: UITableViewScrollPosition){
+
+        
     }
     
  /*
@@ -124,13 +139,17 @@ class MissedViewController: UIViewController, UITableViewDataSource{
         
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("missedCell") as! MissedTableViewCell
         cell.missedImageView.image = self.results[indexPath.row]
-      //  cell.applyPlainShadow(missedCell.outer_layer!)
-      //  cell.applyCurvedShadow(missedCell.outer_layer!)
-      //  cell.applyHoverShadow(missedCell.outer_layer!)
+        cell.applyPlainShadow()
+       
+       // cell.applyCurvedShadow()
+      //  cell.applyHoverShadow()
         return cell
     }
+    
+    
 
 }

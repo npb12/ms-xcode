@@ -21,7 +21,7 @@ class LandingViewController: UIViewController, FBLoginViewDelegate {
         //serverManagement.serverGet()
         
         self.fbLoginView.delegate = self
-        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_photos"]
         
         
         super.viewDidLoad()

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SocialViewController: UIViewController, UITableViewDataSource {
+class SocialViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
     
     @IBOutlet weak var tableView: UITableView!
-    //var destController:UserSocialViewController!
+    var destController:UserSocialViewController!
     
     let socialhelper = SocialHelper()
     
@@ -34,6 +34,8 @@ class SocialViewController: UIViewController, UITableViewDataSource {
         
         //   self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "socialCell")
         
+        tableView.delegate = self
+        
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -53,18 +55,33 @@ class SocialViewController: UIViewController, UITableViewDataSource {
     
     }
     */
+ /*
     
-    /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-    performSegueWithIdentifier("socialSegue", sender: self)
+
+    println("selected")
+   /*
     self.currentSocialModel = self.sources[indexPath.row]
     if((self.destController) != nil){
     self.destController!.socialModel = self.currentSocialModel
     self.destController!.executeSocialUser()
+    }*/
+    
     }
+*/
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        performSegueWithIdentifier("socialSegue", sender: self)        
     }
     
+    
+    @IBAction func goBackSocial(segue:UIStoryboardSegue) {
+        
+    }
+    
+    
+  /*
     func selectRowAtIndexPath(indexPath: NSIndexPath!, animated: Bool, scrollPosition: UITableViewScrollPosition){
     println("selectrowatindexpath")
     
@@ -84,17 +101,17 @@ class SocialViewController: UIViewController, UITableViewDataSource {
     
     }
     
-    
+     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if(segue.identifier == "socialSegue"){
-    let destinitionController = segue.destinationViewController as? SocialViewController
-    destinitionController!.socialModel = self.currentSocialModel
-    self.destController = destinitionController
+    let destinitionController = segue.destinationViewController as? UserSocialViewController
+//    destinitionController!.socialModel = self.currentSocialModel
+    //self.destController = destinitionController
     }
     println("trying to prepare")
     }
     
-    */
+
     
     /*
     override func viewDidDisappear(animated: Bool) {
@@ -121,6 +138,8 @@ class SocialViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("socialCell") as! SocialTableViewCell
         cell.socialImageView.image = self.results[indexPath.row]
+        cell.applyPlainShadow()
+      //  cell.applyPlainShadow2()
         return cell
     }
     

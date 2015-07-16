@@ -43,6 +43,7 @@ class ConnectionButton: UIButton {
     
     func buttonClicked(sender:UIButton){
         if(sender == self){
+            println("hello")
             if isChecked == true{
                 isChecked = false
             }
