@@ -16,6 +16,7 @@ class MissedSettingsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var missedsocialcheck: UIButton!
     
+    @IBOutlet weak var settingsButton: MissedSettingsButton!
     
 
     override func awakeFromNib() {

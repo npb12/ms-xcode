@@ -11,9 +11,13 @@ import UIKit
 class MissedViewController: UIViewController, UITableViewDataSource{
     
 
-    var results = [UIImage(named: "profile"), UIImage(named: "profile2"), UIImage(named: "profile2"), UIImage(named: "profile2")]
+    var results = [UIImage(named: "profile2"), UIImage(named: "chris_pic"), UIImage(named: "steven_pic")]
+    var names: [String] = ["Nicole", "Chris", "Aaron",]
+    
     
     let user = User()
+    
+    
 
     var refreshControl:UIRefreshControl!
 
@@ -22,7 +26,6 @@ class MissedViewController: UIViewController, UITableViewDataSource{
      * new server code (below)
     */
     @IBOutlet weak var tableView: UITableView?
-    //var destController:UserMissedViewController!
     
     let missedhelper = MissedHelper()
     let missedCell = MissedTableViewCell()
@@ -74,6 +77,7 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
                 
    //     let user_id = user.getUserID()
+        
 
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -143,13 +147,16 @@ class MissedViewController: UIViewController, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("missedCell") as! MissedTableViewCell
         cell.missedImageView.image = self.results[indexPath.row]
+        cell.namers.text = self.names[indexPath.row]
         cell.applyPlainShadow()
+        cell.hideView()
        
        // cell.applyCurvedShadow()
       //  cell.applyHoverShadow()
         return cell
     }
     
+
     
 
 }

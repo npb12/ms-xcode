@@ -23,7 +23,7 @@ class SocialWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var url = NSURL(string:"http://www.instagram.com/_ryanpowers_/")
+        var url = NSURL(string:"http://www.instagram.com/sollcaruso/")
         var req = NSURLRequest(URL:url!)
         self.webView!.loadRequest(req)
     }

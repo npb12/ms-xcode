@@ -12,12 +12,15 @@ class MissedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var outer_layer: UIView!
     
+    @IBOutlet weak var namers: UILabel!
     @IBOutlet var headingLabel:UILabel!
     @IBOutlet var missedImageView:UIImageView!
     
     @IBOutlet weak var edit_button: UIButton!
     
     @IBOutlet weak var pic_layer: UIView!
+    
+    @IBOutlet weak var notification: UIView!
     
     var missed:AnyObject?{
         didSet{
@@ -32,6 +35,17 @@ class MissedTableViewCell: UITableViewCell {
        // self.missedImageView.image = self.image1
         
     
+    }
+    
+    func showView(){
+        
+          self.notification!.hidden = false
+        
+    }
+    
+    func hideView(){
+        
+            self.notification.hidden = true
     }
     
     func applyPlainShadow() {

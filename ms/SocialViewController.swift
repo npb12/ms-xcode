@@ -10,7 +10,9 @@ import UIKit
 
 class SocialViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var results = [UIImage(named: "profile"), UIImage(named: "profile2")]
+    var results = [UIImage(named: "sol_pic"), UIImage(named: "profile"), UIImage(named: "ryanp_pic"), UIImage(named: "steven_pic"), UIImage(named: "ryanb_pic"), UIImage(named: "profile2")]
+    var names: [String] = ["Sol", "Derrick", "Ryan", "Steven", "Ryan", "Alex"]
+    var dates: [String] = ["Connected 1 Day Ago", "Connected 1 Day Ago", "Connected 3 Days Ago", "Connected 5 Days Ago", "Connected 5 Days Ago", "Connected 10 Days Ago"]
     
     @IBOutlet weak var tableView: UITableView!
     var destController:UserSocialViewController!
@@ -138,6 +140,8 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = tableView.dequeueReusableCellWithIdentifier("socialCell") as! SocialTableViewCell
         cell.socialImageView.image = self.results[indexPath.row]
+        cell.namer.text = self.names[indexPath.row]
+        cell.connectedView.text = self.dates[indexPath.row]
         cell.applyPlainShadow()
       //  cell.applyPlainShadow2()
         return cell

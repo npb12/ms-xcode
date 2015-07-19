@@ -15,11 +15,17 @@ class HomeViewController: UITabBarController {
     
     //let serverManagement = ServerManagement()
     
+    let title_nav = UIImage(named: "nav_title") as UIImage?
+
+    
 
     override func viewDidLoad() {
     //    self.dismissViewControllerAnimated(flag: YES, completion: nil)
 
         super.viewDidLoad()
+        
+        self.navigationItem.titleView = UIImageView(image: title_nav)
+
         
 
     }

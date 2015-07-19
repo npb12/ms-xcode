@@ -53,6 +53,7 @@
 		4ACC0DC71A70CA8D00CF74C4 /* CoreDataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC0DC61A70CA8D00CF74C4 /* CoreDataManagement.swift */; };
 		4ACC0DC91A744A6200CF74C4 /* CoreDataToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC0DC81A744A6200CF74C4 /* CoreDataToServer.swift */; };
 		4ACC0DCB1A760B8900CF74C4 /* ServerManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC0DCA1A760B8900CF74C4 /* ServerManagement.swift */; };
+		4AD802271B5A01D500BE3DB2 /* MissedSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD802261B5A01D500BE3DB2 /* MissedSettingsButton.swift */; };
 		4AEFB2BB1B1192BA008FC58A /* UserPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB2BA1B1192BA008FC58A /* UserPhotos.swift */; };
 		4AEFB2BD1B119348008FC58A /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB2BC1B119348008FC58A /* AlbumModel.swift */; };
 		4AEFB2BF1B11945B008FC58A /* FBphotohelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB2BE1B11945B008FC58A /* FBphotohelper.swift */; };
@@ -123,6 +124,7 @@
 		4ACC0DC61A70CA8D00CF74C4 /* CoreDataManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManagement.swift; sourceTree = "<group>"; };
 		4ACC0DC81A744A6200CF74C4 /* CoreDataToServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataToServer.swift; sourceTree = "<group>"; };
 		4ACC0DCA1A760B8900CF74C4 /* ServerManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagement.swift; sourceTree = "<group>"; };
+		4AD802261B5A01D500BE3DB2 /* MissedSettingsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissedSettingsButton.swift; sourceTree = "<group>"; };
 		4AEFB2BA1B1192BA008FC58A /* UserPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPhotos.swift; sourceTree = "<group>"; };
 		4AEFB2BC1B119348008FC58A /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		4AEFB2BE1B11945B008FC58A /* FBphotohelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBphotohelper.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				4AC3BB301B52464300EA6ED3 /* MissedSettingsModel.swift */,
 				4AC3BB381B54AF9D00EA6ED3 /* addConnection.swift */,
 				4AC3BB3A1B54B3DA00EA6ED3 /* ConnectionButton.swift */,
+				4AD802261B5A01D500BE3DB2 /* MissedSettingsButton.swift */,
 			);
 			name = Missed;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				4A5E96E91B4252F100DEFDB8 /* SocialModel.swift in Sources */,
 				4AC3BB2D1B52452900EA6ED3 /* MissedSettingsViewController.swift in Sources */,
 				4A57225A1B4F72980057572C /* UserSocialViewController.swift in Sources */,
+				4AD802271B5A01D500BE3DB2 /* MissedSettingsButton.swift in Sources */,
 				4AEFB2C11B119703008FC58A /* AlbumsViewController.swift in Sources */,
 				4A5E96ED1B4258F300DEFDB8 /* UserProfileModel.swift in Sources */,
 				4AC3BB391B54AF9D00EA6ED3 /* addConnection.swift in Sources */,

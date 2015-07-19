@@ -14,11 +14,11 @@ class UserProfileViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var social_image = [UIImage(named: "Facebook-icon"), UIImage(named: "Linkedin-icon")]
-    var social_text: [String] = ["Facebook", "Linkedin"]
+    var social_image = [UIImage(named: "Facebook-icon"), UIImage(named: "Instagram-icon"), UIImage(named: "Snapchat-icon")]
+    var social_text: [String] = ["Facebook", "Instagram", "Snapchat"]
     
-    var image1 = UIImage(named: "profile")
-    
+    var image1 = UIImage(named: "sol_pic")
+
     var destController:SocialWebViewController!
     
     
@@ -64,7 +64,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource {
         cell.socialTextView.text = self.social_text[indexPath.row]
         return cell
     }
-    
+/*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "WebSegue"){
             let destinitionController = segue.destinationViewController as? SocialWebViewController
@@ -72,7 +72,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource {
         }
         println("trying to prepare")
     }
-    
+ */   
         
         
 }

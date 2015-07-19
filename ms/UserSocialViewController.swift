@@ -21,6 +21,9 @@ class UserSocialViewController: UIViewController {
     var social_text = [String]()
     var sources = [String]()
     
+    var destController:SocialWebViewController!
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,15 +122,15 @@ class UserSocialViewController: UIViewController {
     cell.socialTextView.text = self.social_text[indexPath.row]
     return cell
     }
-    
+   */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if(segue.identifier == "WebSegue"){
     let destinitionController = segue.destinationViewController as? SocialWebViewController
-    self.destController = destinitionController
-    }
-    println("trying to prepare")
+      self.destController = destinitionController
+      }
+      println("trying to prepare")
     }
     
-    */
+
 
 }

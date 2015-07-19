@@ -12,6 +12,11 @@ class SocialTableViewCell: UITableViewCell {
     
     @IBOutlet weak var socialImageView: UIImageView!
     
+    @IBOutlet weak var namer: UITextView!
+
+    @IBOutlet weak var connectedView: UITextView!
+    
+    
     @IBOutlet weak var border: UIView!
     @IBOutlet weak var outer_layer: UIView!
     var social:AnyObject?{

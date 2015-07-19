@@ -9,6 +9,8 @@
 import UIKit
 
 class ConnectionButton: UIButton {
+    
+    let missed = MissedTableViewCell()
 
 
     let add_button = UIImage(named: "add-button") as UIImage?
@@ -34,7 +36,6 @@ class ConnectionButton: UIButton {
     
     
     override func awakeFromNib() {
-        println("awakeNib")
         self.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         self.isChecked = true
 
@@ -46,6 +47,8 @@ class ConnectionButton: UIButton {
             println("hello")
             if isChecked == true{
                 isChecked = false
+                println("new connection")
+               // missed.showView()
             }
         }
         

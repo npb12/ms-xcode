@@ -175,7 +175,7 @@ class User{
     func getImage0()->UIImage
     {
         
-        let default_image = UIImage(named: "default_image") as UIImage?
+        let default_image = UIImage(named: "me_pic") as UIImage?
         
         
         let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory

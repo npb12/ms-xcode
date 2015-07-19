@@ -23,6 +23,8 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     let link = LinkedinBox()
     var sendServer = false
     
+
+    
     var insta_text = ""
     var link_text = ""
     var snap_text = ""
@@ -40,6 +42,10 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     
     @IBOutlet weak var snap_icon: UIImageView!
+    
+    
+    
+    
     /*
       logic -- 
           if server recieves "" text didn't change
@@ -70,6 +76,7 @@ class MySocialViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     @IBOutlet weak var line4: UIView!
     override func viewDidLoad() {
+        
 
         
         let defaults = NSUserDefaults.standardUserDefaults()
